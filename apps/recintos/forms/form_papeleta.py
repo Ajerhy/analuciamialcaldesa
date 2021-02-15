@@ -7,7 +7,7 @@ class PapeletaForm(forms.ModelForm):
       fields = ['sufragio','mesa',
                 'totalpapeletas','votovalidos',
                 'votonullo','votoblanco',
-                'votopst', 'votopaso', 'votopanbol', 'votocid', 'votomda', 'votomts', 'votovida', 'votomasipsp',
+                'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
                 'papeletasobreante','carnetssobrantes',
                 'ubicacion']
       #fields = '__all__'
