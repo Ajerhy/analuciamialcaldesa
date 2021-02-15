@@ -1,0 +1,1 @@
+web: gunicorn analuciamialcaldesa.wsgi --log-file -

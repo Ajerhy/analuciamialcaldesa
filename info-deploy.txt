@@ -1,0 +1,203 @@
+Requisitos
+- Cuenta en Heroku y Heroku Cli instalado en el ordenador
+- Tener instalado gunicorn y whitenoise: pip install gunicorn, whitenoise
+
+Usando Heroku Toolbelt
+- heroku login (ingresar correo y contraseña de heroku)
+- heroku create app_name
+
+Agregar el archivo Procfile con el contenido:pip
+web: gunicorn project_name.wsgi --log-file -
+
+Agregar el archivo requirements.txt:
+pip freeze (mayor que) requirements.txt
+
+Agregar el archivo runtime.txt
+python-2.7.14           (indicar la versión buildpack)
+
+En el archivo settings.py
+- DEBUG = False
+- ALLOWED_HOSTS = ['*']
+- En el area de staticos:
+    - STATIC_URL = '/static/'
+    - STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    - 
+
+En el archivo wsgi.py
+import os
+
+from django.core.wsgi import get_wsgi_application
+*** from whitenoise.django import DjangoWhiteNoise
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", “project_name.settings")
+application = get_wsgi_application()
+*** application = DjangoWhiteNoise(application)
+
+
+
+
+
+
+
+
+
+
+
+
+
+python manage.py collectstatic --noinput
+
+dj-database-url
+gunicorn
+python-decouple
+
+psycopg2==2.8.4
+
+manage.py collectstatic --noinput
+heroku login
+python-3.6.10
+
+heroku create analuciamialcaldesa
+heroku git:remote -a analuciamialcaldesa
+heroku config:set DISABLE_COLLECTSTATIC=1
+heroku addons:create heroku-postgresql:hobby-dev
+//heroku addons:create heroku-postgresql:hobby-dev -a analuciamialcaldesa
+//heroku config -a analuciamialcaldesa
+*git push heroku master
+heroku run python manage.py migrate
+//heroku run python manage.py makemigrations usuario
+heroku run python manage.py createsuperuser
+
+migrar en postgresql
+subir
+heroku run python manage.py migrate
+heroku run python manage.py createsuperuser
+
+
+git add --all
+git commit -m "nuevo modulo"
+*git push heroku master
+
+heroku open
+heroku config
+heroku addons
+heroku addons:open
+
+
+
+git pull origin master
+git add .
+git commit -am "Pre-Modulo heroku"
+git push heroku master
+
+https://api.whatsapp.com/send?phone=+#&text=#MeImportaTuVida%20GeoPuntoPando%20Usuario:%20Password:
+192.168.1.9:8000
+
+https://api.whatsapp.com/send?phone=+557598241131&text=https://geopuntospando.herokuapp.com%0AHola Buenos dias Doctor(a):NUBIA MONJE %0Ausuario: nubia %0APassword: Monje@1598AY %0AMuchas Gracias atentamente%0AAjerhy Inc & *MeImportaTuVida*
+
+https://api.whatsapp.com/send?phone=+59178219033&text=https://geopuntospando.herokuapp.com%0AHola Buenos dias Doctor(a):YINA VARGAS %0Ausuario: yina %0APassword: vargasZ@345 %0AMuchas Gracias atentamente%0AAjerhy Inc & *MeImportaTuVida*
+
+https://api.whatsapp.com/send?phone=+556984811319&text=https://geopuntospando.herokuapp.com%0AHola Buenos dias Doctor(a):GABY FARAH %0Ausuario: gaby %0APassword: farah@56DA %0AMuchas Gracias atentamente%0AAjerhy Inc & *MeImportaTuVida*
+
+https://api.whatsapp.com/send?phone=+573024277786&text=https://geopuntospando.herokuapp.com%0AHola Buenos dias Doctor(a):ALEJANDRA LANZA %0Ausuario: alejandra %0APassword: LANAZA#274X %0AMuchas Gracias atentamente%0AAjerhy Inc & *MeImportaTuVida*
+
+https://api.whatsapp.com/send?phone=+59165105970&text=https://geopuntospando.herokuapp.com%0AHola Buenos dias Doctor(a):DANIELA GUACHALLA %0Ausuario: daniela %0APassword: guachallA#8972D %0AMuchas Gracias atentamente%0AAjerhy Inc & *MeImportaTuVida*
+
+https://api.whatsapp.com/send?phone=+59169753212&text=https://geopuntospando.herokuapp.com%0AHola Buenos dias Doctor(a):RODRIGO ALEJANDRO MORALES %0Ausuario: rodrigo %0APassword: *morales@2346 %0AMuchas Gracias atentamente%0AAjerhy Inc & *MeImportaTuVida*
+
+https://api.whatsapp.com/send?phone=+556999289539&text=https://geopuntospando.herokuapp.com%0AHola Buenos dias Doctor(a):CHRISTIAN SEQUEIROS %0Ausuario: christian %0APassword: *sequeiros2@56 %0AMuchas Gracias atentamente%0AAjerhy Inc & *MeImportaTuVida*
+
+
+https://api.whatsapp.com/send?phone=+59178210249&text=https://geopuntospando.herokuapp.com%0AHola Buenas Noches Ing:Nelina Pasten Duran %0Ausuario: nelina %0APassword: @PASTEN*5643 %0A Está prohibido difundir, fotografía, compartir información de los paciente de esta plataforma excepto con los medicos y equipo operativo de MeImportaTuVida %0AAjerhy Inc & *MeImportaTuVida*
+
+
+
+
+https://api.whatsapp.com/send?phone=
++59165754949
+&text=https://geopuntospando.herokuapp.com
+%0AHola Buenos Tardes Doctor(a): Daniela Rosales Rojas
+%0A Su Usuario en la Plataforma es
+%0Ausuario: rosales
+%0APassword: @Rojas*5sd3
+%0A *MeImportaTuVida*
+
+
+https://api.whatsapp.com/send?phone=
++59162397361
+&text=https://geopuntospando.herokuapp.com
+%0AHola Buenos Tardes Doctor(a): Raquel Gaby Herrera Patzi
+%0A Su Usuario en la Plataforma es
+%0Ausuario: raquel
+%0APassword: @Gaby36345
+%0A *MeImportaTuVida*
+
+
+https://api.whatsapp.com/send?phone=
++59176444486
+&text=https://geopuntospando.herokuapp.com
+%0AHola Buenos Tardes Doctor(a): Maria Rene Barrientos do Lago
+%0A Su Usuario en la Plataforma es
+%0Ausuario: barrientos
+%0APassword: @Maria**323
+%0A *MeImportaTuVida*
+
+https://api.whatsapp.com/send?phone=
++59179798141
+&text=https://geopuntospando.herokuapp.com
+%0AHola Buenos Tardes Doctor(a): Gabriela Kandy Suba Galarza
+%0A Su Usuario en la Plataforma es
+%0Ausuario: kandy
+%0APassword: @Suba845*3
+%0A *MeImportaTuVida*
+
+
+
+
+
+
+
+[auth]
+    changepassword
+    createsuperuser
+
+[authtoken]
+    drf_create_token
+
+[contenttypes]
+    remove_stale_contenttypes
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+
+[rest_framework]
+    generateschema
+
+[sessions]
+    clearsessions
+
+[staticfiles]
+    collectstatic
+    findstatic
+    runserver
