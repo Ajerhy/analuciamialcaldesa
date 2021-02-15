@@ -39,7 +39,7 @@ class MunicipioListarView(LoginRequiredMixin,ListView):
 """
 class MunicipioListarView(LoginRequiredMixin,ValidatePermissionRequiredMixin,TemplateView):
     model = Municipios
-    template_name = "geopuntospando/apps/geolocalizacion/municipio/listar.html"
+    template_name = 'ana/apps/geolocalizacion/municipio/listar.html'
     login_url = 'usuarios:index'
 
     def get_context_data(self, **kwargs):
@@ -48,7 +48,7 @@ class MunicipioListarView(LoginRequiredMixin,ValidatePermissionRequiredMixin,Tem
         personaactiva = self.model.objects.exclude(estado='True')
         context['fields'] = DISTRITO_FIELDS
         context["municipioo_count"] = personaactiva
-        context["list_municipio"] = personatodo
+        context["listar_municipio"] = personatodo
         return context
 
 

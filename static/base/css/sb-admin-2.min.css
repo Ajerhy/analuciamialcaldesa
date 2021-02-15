@@ -5151,16 +5151,20 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    background-color: #4e73df;
-    border-color: #4e73df
+    /*background-color: #4e73df;
+    border-color: #4e73df*/
+    background-color: #13855c;
+    border-color: #13855c
 }
 
 .page-item.disabled .page-link {
-    color: #858796;
+    /*color: #858796;*/
+    color: #1cc88a;
     pointer-events: none;
     cursor: auto;
     background-color: #fff;
-    border-color: #dddfeb
+    /*border-color: #dddfeb*/
+    border-color: #13855c
 }
 
 .pagination-lg .page-link {

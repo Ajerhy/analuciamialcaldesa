@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="" />
+    <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/geolocalizacion/municipio/listar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geolocalizacion/view/views_municipios.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geolocalizacion/view/views_municipios.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/css/sb-admin-2.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/geolocalizacion/localidad/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/geolocalizacion/localidad/listar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/navbar-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/navbar-nav.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +28,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1oUem9S4V8gspEM04w8onryK5lE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,11 +39,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/apps/recintos/conteo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/apps/geolocalizacion/municipio" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\geolocalizacion\municipio" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\conteo" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\apps\recintos\forms" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\mesa" />
@@ -74,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613345760737</updated>
-      <workItem from="1613345765011" duration="17405000" />
+      <workItem from="1613345765011" duration="18809000" />
     </task>
     <servers />
   </component>

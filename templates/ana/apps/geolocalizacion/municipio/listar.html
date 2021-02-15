@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 {% load static %}
 
-{% block title %} Listar Localidades {% endblock title %}
+{% block title %} Listar Municipios {% endblock title %}
 
 {% block csssextras %}
 {% endblock csssextras %}
@@ -10,7 +10,7 @@
     <!-- row -->
     <div class="row mb-1">
         <div class="col-sm-6">
-            <h5 class="m-0 text-dark">Listar Localidad &nbsp;
+            <h5 class="m-0 text-dark">Listar Municipio &nbsp;
             <a class="btn btn-success" href="">
                     <i class="fas fa-plus"></i> Agregar</a>
             </h5>
@@ -18,7 +18,7 @@
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="">Dasboard</a></li>
-                <li class="breadcrumb-item active"> Localidades </li>
+                <li class="breadcrumb-item active"> Municipios </li>
             </ol>
         </div><!-- /.col -->
     </div>
@@ -43,14 +43,14 @@
                       </thead>
 
                       <tbody>
-                      {% for l in listar_localidad %}
+                      {% for m in listar_municipio %}
                           <tr>
                               <td> {{ forloop.counter }} </td>
 
-                              <td> {{ l.nombrelocalidad }} </td>
-                              <td> {{ l.municipios.nombremunicipios }} </td>
-
-                              {% if l.estado == True %}
+                              <td> {{ m.nombremunicipios }} </td>
+                              <td> {{ m.provincias.nombreprovincias }} </td>
+                              <td> {{ m.siglaprovincias }} </td>
+                              {% if m.estado == True %}
                                   <td class="text-center">
                                       <span class="right badge badge-success">Activo</span>
                                   </td>
@@ -86,17 +86,17 @@
                       </tbody>
 
                       <tfoot>
+                      <tr>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                      </tr>
                       <!--tr>
                           {% for field in fields %}
                               <th>{{ field.string }}</th>
                           {% endfor %}
                       </tr-->
-                      <tr>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-
-                      </tr>
                       </tfoot>
 
                   </table>
