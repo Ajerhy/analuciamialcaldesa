@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/modo.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/modo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,7 @@
       <workItem from="1613345765011" duration="19011000" />
       <workItem from="1613393487172" duration="8111000" />
       <workItem from="1613407706964" duration="5977000" />
-      <workItem from="1613415901582" duration="1737000" />
+      <workItem from="1613415901582" duration="1918000" />
     </task>
     <servers />
   </component>
