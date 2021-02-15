@@ -74,7 +74,7 @@ heroku run python manage.py createsuperuser
 
 
 git add --all
-git commit -m "nuevo modulo"
+git commit -m "nuevo modulo1"
 *git push heroku master
 
 heroku open
