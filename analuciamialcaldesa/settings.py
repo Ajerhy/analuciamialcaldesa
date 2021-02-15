@@ -91,3 +91,8 @@ from analuciamialcaldesa.configuracion.internacionalizacion import *
 from analuciamialcaldesa.configuracion.static_media import *
 #STATIC_URL = '/static/'
 API_KEY_GOOGLE_MAPS = "AIzaSyBZ5qBVH8EsMPdtJ5sy8qopzRfCzwddtaA"
+
+SITE_ROOT = 1
+# Activate Django-Heroku and deactivate Heroku loggins to activate custom logger.
+import django_heroku
+django_heroku.settings(locals(), logging=False)

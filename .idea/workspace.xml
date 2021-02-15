@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/modo.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/modo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info-deploy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info-deploy.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Desarrollo/Django/dashboard-django/dashdjango" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/proyecto/analuciamialcaldesa/analuciamialcaldesa" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -85,7 +86,7 @@
       <workItem from="1613345765011" duration="19011000" />
       <workItem from="1613393487172" duration="8111000" />
       <workItem from="1613407706964" duration="5977000" />
-      <workItem from="1613415901582" duration="756000" />
+      <workItem from="1613415901582" duration="1094000" />
     </task>
     <servers />
   </component>
