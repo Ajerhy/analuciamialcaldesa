@@ -55,6 +55,7 @@ psycopg2==2.8.4
 manage.py collectstatic --noinput
 heroku login
 python-3.6.10
+python-3.9.1
 
 heroku create analuciamialcaldesa
 heroku git:remote -a analuciamialcaldesa

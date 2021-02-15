@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info-deploy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info-deploy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
       <workItem from="1613345765011" duration="19011000" />
       <workItem from="1613393487172" duration="8111000" />
       <workItem from="1613407706964" duration="5977000" />
-      <workItem from="1613415901582" duration="1094000" />
+      <workItem from="1613415901582" duration="1558000" />
     </task>
     <servers />
   </component>
