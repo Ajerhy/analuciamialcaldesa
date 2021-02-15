@@ -53,7 +53,19 @@ class SufragioAdmin(ImportExportModelAdmin):
     list_display = ('id','tiposugrafio','estado')
 admin.site.register(Sufragio,SufragioAdmin)
 #############################################################
-class ConteoAdmin(admin.ModelAdmin):
+class ImportExportConteoResource(resources.ModelResource):
+    class Meta:
+        model = Conteo
+        import_id_fields = ('id',)
+        fields = ['id','totalpapeletas','votonullo', 'votoblanco',
+                    'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
+                    'papeletasobreante','carnetssobrantes',
+                    'verificacioncipapeleta',
+                    'nropapeletasobrante','marcadopapeleta','cerrarpapeleta','total']
+
+class ConteoAdmin(ImportExportModelAdmin):
+    resource_class = ImportExportConteoResource
+
     list_display = ('id','totalpapeletas','votonullo', 'votoblanco',
                     'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
                     'papeletasobreante','carnetssobrantes',
