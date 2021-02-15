@@ -48,7 +48,11 @@
                           <tr>
                               <td> {{ forloop.counter }} </td>
                               <td class="h6">{{ m.recinto.nombrerecinto }}</td>
-                              <td class="h6">{{ m.numeromesa }}</td>
+                              <td class="h6">
+                                   <a data-toggle="tooltip" data-placement="top" title="Mesa Papeleta" href="{% url 'recintos:papeleta_mesa' m.id %}">
+                                       {{ m.numeromesa }}
+                                  </a>
+                              </td>
                               <td class="h6">{{ m.mesahabilitado }}</td>
 
                               {% if m.estado == True %}
@@ -94,11 +98,11 @@
                       <tr>
                           <td></td>
                           <td>
-                             {{mesas}} Mesas
+                              {{ mesas }} Mesas
                           </td>
                           <td></td>
                           <td>
-{{ mesas_habilitados.mesahabilitado__sum|default_if_none:"" }} Votantes
+                              {{ mesas_habilitados.mesahabilitado__sum|default_if_none:"" }} Votantes
                           </td>
                           <!--td></td>
                           <td></td-->

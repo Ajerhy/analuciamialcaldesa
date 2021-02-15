@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/databases.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ana/estadistica/linea.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ana/estadistica/resultado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/view/view_conteo.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/view/view_conteo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/view/view_mesa.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/view/view_mesa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/base/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/css/sb-admin-2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/resultado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/navbar-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/navbar-nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/listar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/mesa/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/mesa/listar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/recinto/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/recinto/listar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/estadistica/linea.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/estadistica/linea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/static/base_dasboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/static/base_dasboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/estadistica" />
+    <property name="last_opened_file_path" value="D:/Desarrollo/Django/dashboard-django/dashdjango" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -63,6 +67,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="analuciamialcaldesa.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -90,7 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1613345760737</updated>
       <workItem from="1613345765011" duration="19011000" />
-      <workItem from="1613393487172" duration="2844000" />
+      <workItem from="1613393487172" duration="8111000" />
+      <workItem from="1613407706964" duration="5977000" />
     </task>
     <servers />
   </component>

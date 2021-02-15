@@ -51,8 +51,13 @@
                               <td>{{ r.localidad.nombrelocalidad }}</td>
                               <td CLASS="h6">{{ r.nombrerecinto }}</td>
                               <td>{{ r.numerorecinto }}</td>
-                              <td>{{ r.recintomesa }}</td>
-<td>{{ r.recintohabilitado }}</td>
+                              <td>
+                                  <a data-toggle="tooltip" data-placement="top" title="Recintos en Mesa" href="{% url 'recintos:mesa_recinto' r.id %}">
+                                      {{ r.recintomesa }}
+                                  </a>
+                              </td>
+
+                              <td>{{ r.recintohabilitado }}</td>
                               {% if r.estado == True %}
                                   <td class="text-center">
                                       <span class="right badge badge-success">Activo</span>

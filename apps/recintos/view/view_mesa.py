@@ -11,14 +11,14 @@ import json
 from apps.usuarios.templatetags.utils import get_ip
 from django.db.models import Q
 from analuciamialcaldesa import settings
-from apps.recintos.models import Mesa
+from apps.recintos.models import Mesa,Recinto
 from django.db.models import Sum
 #from apps.tecnico.forms import ProfesorForm
 
 MESA_FIELDS = [
     {'string': 'N°'},
     {'string': 'Recinto'},
-    {'string': 'Numero'},
+    {'string': 'Numero Mesa'},
     {'string': 'Habilitados'},
     {'string': 'Estado'},
     {'string': 'Acciones'},
@@ -42,3 +42,16 @@ class MesaListarView(LoginRequiredMixin,TemplateView):
         context["listar_mesa"] = mesatodo
         context["API_KEY"] = settings.API_KEY_GOOGLE_MAPS
         return context
+
+
+@login_required(login_url='usuarios:index')
+def RecintoMesaView(request, pk):  # barrio_persona_id=pk
+    template_name = "ana/apps/recintos/mesa/listar.html"
+    mesa = Mesa.objects.filter(recinto=pk)
+    #paciente = Paciente.objects.filter(persona__barrio_id=pk)
+
+    return render(request, template_name, {
+        'fields': MESA_FIELDS,
+        'listar_mesa': mesa,
+        'API_KEY': settings.API_KEY_GOOGLE_MAPS
+    })

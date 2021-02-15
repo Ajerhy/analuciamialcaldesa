@@ -55,8 +55,8 @@ admin.site.register(Sufragio,SufragioAdmin)
 #############################################################
 class ConteoAdmin(admin.ModelAdmin):
     list_display = ('id','totalpapeletas','votonullo', 'votoblanco',
-                    'votopst', 'votopaso', 'votopanbol', 'votocid', 'votomda', 'votomts', 'votovida', 'votomasipsp',
+                    'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
                     'papeletasobreante','carnetssobrantes',
                     'verificacioncipapeleta',
-                    'nropapeletasobrante','marcadopapeleta','total')
+                    'nropapeletasobrante','marcadopapeleta','cerrarpapeleta','total')
 admin.site.register(Conteo,ConteoAdmin)

@@ -11,7 +11,7 @@ from django.contrib.auth import logout as logout_django
 from analuciamialcaldesa import settings
 from django.contrib.auth.models import Group
 from apps.usuarios.models import Usuario
-from apps.recintos.models import Recinto
+from apps.recintos.models import Recinto,Conteo,Mesa
 from django.db.models import Sum
 # Login
 
@@ -108,6 +108,22 @@ class ResultadoView(LoginRequiredMixin,TemplateView):
 class LineaView(LoginRequiredMixin,TemplateView):
     login_url = 'usuarios:index'
     template_name = "ana/estadistica/linea.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(LineaView, self).get_context_data(**kwargs)
+
+        context['mesas_habilitados'] = Mesa.objects.aggregate(Sum('mesahabilitado'))
+        context["nulos"] = Conteo.objects.aggregate(Sum('votonullo'))
+        context["blancos"] = Conteo.objects.aggregate(Sum('votoblanco'))
+        context["cid"] = Conteo.objects.aggregate(Sum('votocid'))
+        context["masipsp"] = Conteo.objects.aggregate(Sum('votomasipsp'))
+        context["panbol"] = Conteo.objects.aggregate(Sum('votopanbol'))
+        context["pst"] = Conteo.objects.aggregate(Sum('votopst'))
+        context["mts"] = Conteo.objects.aggregate(Sum('votomts'))
+        context["fpv"] = Conteo.objects.aggregate(Sum('votofpv'))
+        context["paso"] = Conteo.objects.aggregate(Sum('votopaso'))
+        context["mda"] = Conteo.objects.aggregate(Sum('votomda'))
+        return context
 
 class GrupoCambioUsuario(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):

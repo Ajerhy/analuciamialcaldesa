@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '0oc305u3geb+wlwy!quqdxt$d0_*!9#7f1lm#a+wzh3*wk1+oq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-#ALLOWED_HOSTS = []
+DEBUG = True
+ALLOWED_HOSTS = []
 
-from analuciamialcaldesa.configuracion.modo import *
+#from analuciamialcaldesa.configuracion.modo import *
 
 # Application definition
 

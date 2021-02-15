@@ -8,8 +8,8 @@ class Recinto(EstadoModel):
     localidad = models.ForeignKey(Localidad, null=True, blank=True, on_delete=models.CASCADE)
     nombrerecinto = models.CharField(max_length=100, blank=False, null=True,verbose_name='Nombre Recinto o Unidad Educativa',
                                      help_text='Ingrese Nombre del Recinto o Unidad Educativa')
-    numerorecinto = models.CharField(max_length=100, blank=False, null=True, verbose_name='Numero Recinto',
-                                     help_text='Ingrese Numero del Recinto')
+    numerorecinto = models.CharField(max_length=100, blank=False, null=True, verbose_name='Sigla Recinto',
+                                     help_text='Ingrese Sigla Recinto')
     recintomesa = models.IntegerField(default=0,verbose_name='Recinto en Mesa')
     recintohabilitado = models.IntegerField(default=0, verbose_name='Habilitado en Recinto')
 
@@ -46,15 +46,15 @@ class Conteo(EstadoModel):
     votonullo = models.IntegerField(default=0, verbose_name='Votos en Nulos')
     votoblanco = models.IntegerField(default=0, verbose_name='Votos en Blancos')
 
-    votopst = models.IntegerField(default=0, verbose_name='Votos en PST',help_text='Pando Somos Todos')
-    votopaso = models.IntegerField(default=0, verbose_name='Votos en PASO',help_text='Poder Amazonico Social')
-    votopanbol = models.IntegerField(default=0, verbose_name='Votos PAN-BOL',help_text='Partido de Accion Nacional Boliviano')
-
-    votocid = models.IntegerField(default=0,verbose_name='Votos en Comunidad de Integracion Democratica',help_text='Comunidad de Integracion Democratica')
-    votomda = models.IntegerField(default=0, verbose_name='Votos en MDA',help_text='Movimiento Democratica Autonomista')
-    votomts = models.IntegerField(default=0, verbose_name='Votos en MTS',help_text='Movimiento Tercer Sistema')
-    votovida = models.IntegerField(default=0, verbose_name='Votos en VIDA',help_text='Vision Democratica Amazonica')
+    #votovida = models.IntegerField(default=0, verbose_name='Votos en VIDA',help_text='Vision Democratica Amazonica')
+    votocid = models.IntegerField(default=0, verbose_name='Votos en Comunidad de Integracion Democratica',help_text='Comunidad de Integracion Democratica')
     votomasipsp = models.IntegerField(default=0, verbose_name='Votos MAS IPSP',help_text='Movimiento Al Socialismo IPSP')
+    votopanbol = models.IntegerField(default=0, verbose_name='Votos PAN-BOL',help_text='Partido de Accion Nacional Boliviano')
+    votopst = models.IntegerField(default=0, verbose_name='Votos en PST',help_text='Pando Somos Todos')
+    votomts = models.IntegerField(default=0, verbose_name='Votos en MTS',help_text='Movimiento Tercer Sistema')
+    votofpv = models.IntegerField(default=0, verbose_name='Votos en FPV', help_text='Frente Para la Victoria')
+    votopaso = models.IntegerField(default=0, verbose_name='Votos en PASO', help_text='Poder Amazonico Social')
+    votomda = models.IntegerField(default=0, verbose_name='Votos en MDA', help_text='Movimiento Democratica Autonomista')
 
     marcadopapeleta = models.IntegerField(default=0, verbose_name='Numero Papeleta Marcados')
 
@@ -70,6 +70,11 @@ class Conteo(EstadoModel):
     total = models.IntegerField(default=0,null=True,blank=True, verbose_name='Total de Votos Partidos')
     #total = models.FloatField(default=0)
 
+    cerrarpapeleta = models.IntegerField(default=0, verbose_name='Papeleta Mesa')
+
+    certificado_img = models.ImageField(verbose_name='Imagen de Certificado', upload_to='certificado/%Y/%m/%d/', blank=True,
+                                    null=True)
+
     ubicacion = models.ForeignKey(Ubicacion, null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -78,7 +83,7 @@ class Conteo(EstadoModel):
     def save(self):
         #3
         self.total = self.votopst + self.votopaso + self.votopanbol + self.votocid \
-                     + self.votomda + self.votomts + self.votovida + self.votomasipsp
+                     + self.votomda + self.votomts + self.votofpv + self.votomasipsp
         #1
         if(self.papeletasobreante != self.carnetssobrantes):
             self.verificacioncipapeleta = 0
@@ -89,4 +94,6 @@ class Conteo(EstadoModel):
 
         #self.nropapeletasobrante = self.total + self.votovalidos + self.votonullo + self.votoblanco - self.totalpapeletas
         self.nropapeletasobrante = self.totalpapeletas - self.marcadopapeleta
+        #4
+        self.cerrarpapeleta = self.marcadopapeleta + self.nropapeletasobrante
         super(Conteo,self).save()

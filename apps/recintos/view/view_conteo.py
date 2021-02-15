@@ -16,16 +16,21 @@ from apps.recintos.models import Conteo
 
 CONTEO_FIELDS = [
     {'string': 'N°'},
+    {'string': 'Mesa'},
     {'string': 'Nulo'},
     {'string': 'Blanco'},
-    {'string': 'PST'},
-    {'string': 'PASO'},
-    {'string': 'PAN-BOL'},
+
     {'string': 'CID'},
-    {'string': 'MDS'},
-    {'string': 'MTS'},
-    {'string': 'VIDA'},
     {'string': 'MAS IPSP'},
+    {'string': 'PAN-BOL'},
+    {'string': 'PST'},
+    {'string': 'MTS'},
+    {'string': 'FPV'},
+    {'string': 'PASO'},
+    {'string': 'MDA'},
+
+
+
     {'string': 'Estado'},
     {'string': 'Acciones'},
 ]
@@ -50,3 +55,15 @@ class ConteoListarView(LoginRequiredMixin,TemplateView):
         context["listar_conteo"] = conteotodo
         context["API_KEY"] = settings.API_KEY_GOOGLE_MAPS
         return context
+
+@login_required(login_url='usuarios:index')
+def MesaPapeletaView(request, pk):
+    template_name = "ana/apps/recintos/conteo/listar.html"
+    papeleta = Conteo.objects.filter(mesa=pk)
+    #paciente = Paciente.objects.filter(persona__barrio_id=pk)
+
+    return render(request, template_name, {
+        'fields': CONTEO_FIELDS,
+        'listar_conteo': papeleta,
+        'API_KEY': settings.API_KEY_GOOGLE_MAPS
+    })

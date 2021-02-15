@@ -47,17 +47,21 @@
                       {% for p in listar_conteo %}
 
                           <tr>
+
                               <td> {{ forloop.counter }} </td>
+                              <td class="h6">{{ p.mesa.recinto.numerorecinto }} {{ p.mesa.numeromesa }}</td>
                               <td class="h6">{{ p.votonullo }}</td>
                               <td class="h6">{{ p.votoblanco }}</td>
-                              <td class="h6">{{ p.votopst }}</td>
-                              <td class="h6">{{ p.votopaso }}</td>
-                              <td class="h6">{{ p.votopanbol }}</td>
+
+
                               <td class="h6">{{ p.votocid }}</td>
-                              <td class="h6">{{ p.votomda }}</td>
-                              <td class="h6">{{ p.votomts }}</td>
-                              <td class="h6">{{ p.votovida }}</td>
                               <td class="h6">{{ p.votomasipsp }}</td>
+                              <td class="h6">{{ p.votopanbol }}</td>
+                              <td class="h6">{{ p.votopst }}</td>
+                              <td class="h6">{{ p.votomts }}</td>
+                              <td class="h6">{{ p.votofpv }}</td>
+                              <td class="h6">{{ p.votopaso }}</td>
+                              <td class="h6">{{ p.votomda }}</td>
 
                               {% if p.estado == True %}
                                   <td class="text-center">
