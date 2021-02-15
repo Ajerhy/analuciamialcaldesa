@@ -103,7 +103,11 @@ class DashboarView(LoginRequiredMixin,TemplateView):
 
 class ResultadoView(LoginRequiredMixin,TemplateView):
     login_url = 'usuarios:index'
-    template_name = "ana/resultado.html"
+    template_name = "ana/estadistica/resultado.html"
+
+class LineaView(LoginRequiredMixin,TemplateView):
+    login_url = 'usuarios:index'
+    template_name = "ana/estadistica/linea.html"
 
 class GrupoCambioUsuario(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):

@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/geolocalizacion/municipio/listar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/databases.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/estadistica/linea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/estadistica/resultado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geolocalizacion/view/views_municipios.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geolocalizacion/view/views_municipios.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/base/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/css/sb-admin-2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/geolocalizacion/localidad/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/geolocalizacion/localidad/listar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/resultado.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base/navbar-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/navbar-nav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,19 +40,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/apps/geolocalizacion/municipio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/estadistica" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\estadistica" />
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\analuciamialcaldesa\configuracion" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\geolocalizacion\municipio" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\conteo" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\apps\recintos\forms" />
-      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\mesa" />
-      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\recinto" />
     </key>
   </component>
   <component name="RunManager">
@@ -84,7 +89,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613345760737</updated>
-      <workItem from="1613345765011" duration="18809000" />
+      <workItem from="1613345765011" duration="19011000" />
+      <workItem from="1613393487172" duration="2844000" />
     </task>
     <servers />
   </component>
@@ -101,5 +107,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

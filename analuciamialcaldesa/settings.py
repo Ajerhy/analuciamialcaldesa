@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '0oc305u3geb+wlwy!quqdxt$d0_*!9#7f1lm#a+wzh3*wk1+oq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+#ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = []
-
+from analuciamialcaldesa.configuracion.modo import *
 
 # Application definition
 
@@ -60,14 +60,15 @@ WSGI_APPLICATION = 'analuciamialcaldesa.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+from analuciamialcaldesa.configuracion.databases import *
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

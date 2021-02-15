@@ -5117,14 +5117,16 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     padding: .5rem .75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #4e73df;
+    /*color: #4e73df;*/
+    color: #3a7548;
     background-color: #fff;
     border: 1px solid #dddfeb
 }
 
 .page-link:hover {
     z-index: 2;
-    color: #224abe;
+    /*color: #224abe;*/
+    color: #1cc88a;
     text-decoration: none;
     background-color: #eaecf4;
     border-color: #dddfeb
