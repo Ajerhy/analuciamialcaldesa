@@ -199,6 +199,10 @@
                         </div>
                     </div>
 
+                    <div class="text-center">
+                        <div id="x_porcentaje"></div>
+                    </div>
+
                     <!--
                     <h3>Dynamic Progress Bar</h3>
                     <p>Running progress bar from 0% to 100% in 10 seconds</p>
@@ -334,6 +338,7 @@
 
     var x_total = x_nulo+x_blanco+x_cid+x_masipsp+x_panbol+x_pst+x_mts+x_fpv+x_paso+x_mda;
     console.log(x_total);
+    $("#x_porcentaje").text(x_total + "% Porcentaje");
 
     console.log(x_blanco);
     console.log(x_nulo);
