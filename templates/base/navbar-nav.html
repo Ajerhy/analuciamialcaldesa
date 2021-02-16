@@ -43,7 +43,7 @@
                     <h6 class="collapse-header">Gestion Votante:</h6>
                     <a class="collapse-item" href="{% url 'recintos:listar_recinto' %}">Recinto</a>
                     <a class="collapse-item" href="{% url 'recintos:listar_mesa' %}">Mesa</a>
-                     <a class="collapse-item" href="{% url 'recintos:listar_conteo' %}">Conteo</a>
+                     <a class="collapse-item" href="{% url 'recintos:listar_conteo' %}">Papeleta</a>
                 </div>
             </div>
         </li>
@@ -62,6 +62,11 @@
             <span>Resultados Linea</span></a>
       </li>
 
+<li class="nav-item">
+        <a class="nav-link" href="{% url 'usuarios:barra' %}">
+            <i class="fas fa-chart-line"></i>
+            <span>Resultados Barra</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">

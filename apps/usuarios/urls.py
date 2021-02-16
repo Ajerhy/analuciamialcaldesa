@@ -1,7 +1,7 @@
 from django.urls import path
 
 from apps.usuarios.views.view_login import LoginView,DashboarView,LogoutView,DashboardSinPrivilegio,\
-    LineaView,ResultadoView
+    LineaView,BarraView,ResultadoView
 
 from apps.usuarios.views.view_usuario import UsuarioListarView
 
@@ -12,6 +12,9 @@ urlpatterns = [
     path('dashboard/', DashboarView.as_view(), name='dashboard'),
     path('resultado/', ResultadoView.as_view(), name='resultado'),
     path('linea/', LineaView.as_view(), name='linea'),
+    path('barra/', BarraView.as_view(), name='barra'),
+
+
 
     path('logout/', LogoutView, name='logout'),
 

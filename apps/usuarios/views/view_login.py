@@ -123,6 +123,31 @@ class LineaView(LoginRequiredMixin,TemplateView):
         context["fpv"] = Conteo.objects.aggregate(Sum('votofpv'))
         context["paso"] = Conteo.objects.aggregate(Sum('votopaso'))
         context["mda"] = Conteo.objects.aggregate(Sum('votomda'))
+        context["total"] = Conteo.objects.aggregate(Sum('marcadopapeleta'))
+        return context
+
+
+
+
+class BarraView(LoginRequiredMixin,TemplateView):
+    login_url = 'usuarios:index'
+    template_name = "ana/estadistica/barra.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(BarraView, self).get_context_data(**kwargs)
+        context['mesas_habilitados'] = Mesa.objects.aggregate(Sum('mesahabilitado'))
+        context["nulos"] = Conteo.objects.aggregate(Sum('votonullo'))
+        context["blancos"] = Conteo.objects.aggregate(Sum('votoblanco'))
+        context["cid"] = Conteo.objects.aggregate(Sum('votocid'))
+        context["masipsp"] = Conteo.objects.aggregate(Sum('votomasipsp'))
+        context["panbol"] = Conteo.objects.aggregate(Sum('votopanbol'))
+        context["pst"] = Conteo.objects.aggregate(Sum('votopst'))
+        context["mts"] = Conteo.objects.aggregate(Sum('votomts'))
+        context["fpv"] = Conteo.objects.aggregate(Sum('votofpv'))
+        context["paso"] = Conteo.objects.aggregate(Sum('votopaso'))
+        context["mda"] = Conteo.objects.aggregate(Sum('votomda'))
+        context["total"] = Conteo.objects.aggregate(Sum('marcadopapeleta'))
+
         return context
 
 class GrupoCambioUsuario(LoginRequiredMixin, View):

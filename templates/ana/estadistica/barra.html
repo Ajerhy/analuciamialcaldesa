@@ -1,0 +1,401 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %} Barra PCBdeU{% endblock title %}
+
+{% block csssextras %}
+{% endblock csssextras %}
+
+{% block contenido %}
+    <div class="row">
+        <div class="col-lg-12 mb-1">
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Votos Elecciones de Alcaldia 2021 <small>{{ mesas_habilitados.mesahabilitado__sum|default_if_none:"" }}</small> Votantes</h6>
+                </div>
+                <div class="card-body">
+
+                    <div class="text-center">{{ total.marcadopapeleta__sum|default_if_none:"" }} Votos</div>
+
+                    <h4 class="small font-weight-bold">Votos Blanco <span
+                            class="float-right">{{ nulos.votonullo__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div id="x_blanco" class="progress progress-lg">
+                                <div class="progress-bar bg-secondary progress-bar-striped active" role="progressbar"
+                                     style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Votos Nulos <span
+                            class="float-right">{{ blancos.votoblanco__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_nulo" class="progress-bar bg-dark progress-bar-striped active" role="progressbar"
+                                     style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h4 class="small font-weight-bold">Comunidad de Integracion Democratica <span
+                            class="float-right">{{ cid.votocid__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_cid"  class="progress-bar bg-danger progress-bar-striped active" role="progressbar"
+                                     style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Movimiento Al Socialismo IPSP <span
+                            class="float-right">{{ masipsp.votomasipsp__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_masipsp" class="progress-bar bg-primary progress-bar-striped active" role="progressbar"
+                                     style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Partido de Accion Nacional Boliviano <span
+                            class="float-right">{{ panbol.votopanbol__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_panbol" class="progress-bar bg-danger progress-bar-striped active" role="progressbar"
+                                     style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Pando Somos Todos <span
+                            class="float-right">{{ pst.votopst__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_pst" class="progress-bar bg-info progress-bar-striped active" role="progressbar"
+                                     style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h4 class="small font-weight-bold">Movimiento Tercer Sistema <span
+                            class="float-right">{{ mts.votomts__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_mts" class="progress-bar bg-success progress-bar-striped active" role="progressbar"
+                                     style="width: 50%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Frente Para la Victoria <span
+                            class="float-right">{{ fpv.votofpv__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_fpv" class="progress-bar bg-info progress-bar-striped active" role="progressbar"
+                                     style="width: 50%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Poder Amazonico Social <span
+                            class="float-right">{{ paso.votopaso__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_paso" class="progress-bar bg-info progress-bar-striped active" role="progressbar"
+                                     style="width: 50%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Movimiento Democratica Autonomista <span
+                            class="float-right">{{ mda.votomda__sum|default_if_none:"" }}</span></h4>
+                    <div class="row no-gutters align-items-center mb-1">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                <img class="img-circle" height="50pd" width="50pd"
+                                     src="{% static 'favicon.ico' %}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-lg">
+                                <div id="x_mda" class="progress-bar bg-warning progress-bar-striped active" role="progressbar"
+                                     style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    <h3>Dynamic Progress Bar</h3>
+                    <p>Running progress bar from 0% to 100% in 10 seconds</p>
+                    <div class="progress">
+                        <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active"
+                             role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                             style="width: 0%">
+                            <span id="current-progress"></span>
+                        </div>
+                    </div>
+                    -->
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock contenido %}
+
+{% block jssextras %}
+
+    <script src="{% static 'lib/highcharts-8.1.2/highcharts.js' %}"></script>
+    <script src="{% static 'lib/highcharts-8.1.2/modules/exporting.js' %}"></script>
+    <script src="{% static 'lib/highcharts-8.1.2/modules/export-data.js' %}"></script>
+    <script src="{% static 'lib/highcharts-8.1.2/modules/accessibility.js' %}"></script>
+
+    <script>
+
+        $(function () {
+            var current_progress = 0;
+            var interval = setInterval(function () {
+                current_progress += 10;
+                $("#dynamic")
+                    .css("width", current_progress + "%")
+                    .attr("aria-valuenow", current_progress)
+                    .text(current_progress + "% Votos");
+
+                if (current_progress >= 100)
+                    clearInterval(interval);
+            }, 1000);
+        });
+
+
+        //var habitante = {{ mesas_habilitados.mesahabilitado__sum|default_if_none:"" }};
+        var habitante = {{ total.marcadopapeleta__sum|default_if_none:"" }};
+
+        var blanco = {{ blancos.votoblanco__sum|default_if_none:"" }};
+        var totalblanco = blanco * 100 / habitante;
+        var x_blanco = Math.round(totalblanco);
+        $("#x_blanco")
+            .css("width", x_blanco + "%")
+            .attr("aria-valuenow", x_blanco)
+            .text(x_blanco + "% Votos");
+
+        var nulo = {{ nulos.votonullo__sum|default_if_none:"" }};
+        var totalnulo = nulo * 100 / habitante;
+        var x_nulo = Math.round(totalnulo);
+        $("#x_nulo")
+            .css("width", x_nulo + "%")
+            .attr("aria-valuenow", x_nulo)
+            .text(x_nulo + "% Votos");
+
+        var cid = {{ cid.votocid__sum|default_if_none:"" }};
+        var totalcid = cid * 100 / habitante;
+        var x_cid = Math.round(totalcid);
+        $("#x_cid")
+            .css("width", x_cid + "%")
+            .attr("aria-valuenow", x_cid)
+            .text(x_cid + "% Votos");
+
+
+        var masipsp = {{ masipsp.votomasipsp__sum|default_if_none:"" }};
+        var totalmasipsp = masipsp * 100 / habitante;
+        var x_masipsp = Math.round(totalmasipsp);
+        $("#x_masipsp")
+            .css("width", x_masipsp + "%")
+            .attr("aria-valuenow", x_masipsp)
+            .text(x_masipsp + "% Votos");
+
+
+        var panbol = {{ panbol.votopanbol__sum|default_if_none:"" }};
+        var totalpanbol = panbol * 100 / habitante;
+        var x_panbol = Math.round(totalpanbol);
+        $("#x_panbol")
+            .css("width", x_panbol + "%")
+            .attr("aria-valuenow", x_panbol)
+            .text(x_panbol + "% Votos");
+
+
+        var pst = {{ pst.votopst__sum|default_if_none:"" }};
+        var totalpst = pst * 100 / habitante;
+        var x_pst = Math.round(totalpst);
+        $("#x_pst")
+            .css("width", x_pst + "%")
+            .attr("aria-valuenow", x_pst)
+            .text(x_pst + "% Votos");
+
+        var mts = {{ mts.votomts__sum|default_if_none:"" }};
+        var totalmts = mts * 100 / habitante;
+        var x_mts = Math.round(totalmts);
+        $("#x_mts")
+            .css("width", x_mts + "%")
+            .attr("aria-valuenow", x_mts)
+            .text(x_mts + "% Votos");
+
+
+        var fpv = {{ fpv.votofpv__sum|default_if_none:"" }};
+        var totalfpv = fpv * 100 / habitante;
+        var x_fpv = Math.round(totalfpv);
+        $("#x_fpv")
+            .css("width", x_fpv + "%")
+            .attr("aria-valuenow", x_fpv)
+            .text(x_fpv + "% Votos");
+
+        var paso = {{ paso.votopaso__sum|default_if_none:"" }};
+        var totalpaso = paso * 100 / habitante;
+        var x_paso = Math.round(totalpaso);
+        $("#x_paso")
+            .css("width", x_paso + "%")
+            .attr("aria-valuenow", x_paso)
+            .text(x_paso + "% Votos");
+
+        var mda = {{ mda.votomda__sum|default_if_none:"" }};
+        var totalmda = mda * 100 / habitante;
+        var x_mda = Math.round(totalmda);
+        $("#x_mda")
+            .css("width", x_mda + "%")
+            .attr("aria-valuenow", x_mda)
+            .text(x_mda + "% Votos");
+
+    var x_total = x_nulo+x_blanco+x_cid+x_masipsp+x_panbol+x_pst+x_mts+x_fpv+x_paso+x_mda;
+    console.log(x_total);
+
+    console.log(x_blanco);
+    console.log(x_nulo);
+    console.log(x_cid);
+    console.log(x_masipsp);
+    console.log(x_panbol);
+    console.log(x_pst);
+    console.log(x_mts);
+    console.log(x_fpv);
+    console.log(x_paso);
+    console.log(x_mda);
+    </script>
+
+{% endblock jssextras %}
+<!--
+                    <h4 class="small font-weight-bold">Comunidad de Integracion Democratica <span class="float-right">{{ cid.votocid__sum|default_if_none:"" }}</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0"
+                             aria-valuemin="0"
+                             aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Movimiento Al Socialismo IPSP <span class="float-right">{{ masipsp.votomasipsp__sum|default_if_none:"" }}</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="0"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Partido de Accion Nacional Boliviano <span class="float-right">{{ panbol.votopanbol__sum|default_if_none:"" }}</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Pando Somos Todos <span class="float-right">{{ pst.votopst__sum|default_if_none:"" }}</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Movimiento Tercer Sistema <span class="float-right">{{ mts.votomts__sum|default_if_none:"" }}</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Frente Para la Victoria <span class="float-right">{{ fpv.votofpv__sum|default_if_none:"" }}</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0"
+                             aria-valuemin="0"
+                             aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Poder Amazonico Social <span class="float-right">{{ paso.votopaso__sum|default_if_none:"" }}</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="0"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <h4 class="small font-weight-bold">Movimiento Democratica Autonomista <span class="float-right">{{ mda.votomda__sum|default_if_none:"" }}</span></h4>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+-->

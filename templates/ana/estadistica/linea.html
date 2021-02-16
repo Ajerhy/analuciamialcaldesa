@@ -15,6 +15,8 @@
                 </div>
                 <div class="card-body">
 
+                    <div class="text-center">{{ total.marcadopapeleta__sum|default_if_none:"" }} Votos</div>
+
                     <h4 class="small font-weight-bold">Votos Blanco <span class="float-right">{{ nulos.votonullo__sum|default_if_none:"" }}</span></h4>
                     <div class="progress mb-4">
                         <div class="progress-bar bg-secondary" role="progressbar" style="width: {{ nulos.votonullo__sum|default_if_none:"" }}%" aria-valuenow="20"
@@ -80,6 +82,17 @@
                     </div>
 
 
+                    <h3>Dynamic Progress Bar</h3>
+                    <p>Running progress bar from 0% to 100% in 10 seconds</p>
+                    <div class="progress">
+                        <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active"
+                             role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                             style="width: 0%">
+                            <span id="current-progress"></span>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -93,5 +106,79 @@
     <script src="{% static 'lib/highcharts-8.1.2/modules/exporting.js' %}"></script>
     <script src="{% static 'lib/highcharts-8.1.2/modules/export-data.js' %}"></script>
     <script src="{% static 'lib/highcharts-8.1.2/modules/accessibility.js' %}"></script>
+
+    <script>
+
+        $(function () {
+            var current_progress = 0;
+            var interval = setInterval(function () {
+                current_progress += 10;
+                $("#dynamic")
+                    .css("width", current_progress + "%")
+                    .attr("aria-valuenow", current_progress)
+                    .text(current_progress + "% Votos");
+
+                if (current_progress >= 100)
+                    clearInterval(interval);
+            }, 1000);
+        });
+
+
+    var habitante = {{ mesas_habilitados.mesahabilitado__sum|default_if_none:"" }};
+
+    var nulo = {{ nulos.votonullo__sum|default_if_none:"" }};
+    var totalnulo= nulo*100/habitante;
+    var  x_nulo = Math.round(totalnulo);
+
+    var blanco = {{ blancos.votoblanco__sum|default_if_none:"" }};
+    var totalblanco= blanco*100/habitante;
+    var  x_blanco = Math.round(totalblanco);
+
+    var cid = {{ cid.votocid__sum|default_if_none:"" }};
+    var totalcid = cid * 100 / habitante;
+    var x_cid = Math.round(totalcid);
+
+    var masipsp = {{ masipsp.votomasipsp__sum|default_if_none:"" }};
+    var totalmasipsp = masipsp * 100 / habitante;
+    var x_masipsp = Math.round(totalmasipsp);
+
+    var panbol = {{ panbol.votopanbol__sum|default_if_none:"" }};
+    var totalpanbol = panbol * 100 / habitante;
+    var x_panbol = Math.round(totalpanbol);
+
+    var pst = {{ pst.votopst__sum|default_if_none:"" }};
+    var totalpst = pst * 100 / habitante;
+    var x_pst = Math.round(totalpst);
+
+    var mts = {{ mts.votomts__sum|default_if_none:"" }};
+    var totalmts = mts * 100 / habitante;
+    var x_mts = Math.round(totalmts);
+
+    var fpv = {{ fpv.votofpv__sum|default_if_none:"" }};
+    var totalfpv = fpv * 100 / habitante;
+    var x_fpv = Math.round(totalfpv);
+
+    var paso = {{ paso.votopaso__sum|default_if_none:"" }};
+    var totalpaso = paso * 100 / habitante;
+    var x_paso = Math.round(totalpaso);
+
+    var mda = {{ mda.votomda__sum|default_if_none:"" }};
+    var totalmda = mda * 100 / habitante;
+    var x_mda = Math.round(totalmda);
+
+    var x_total = x_nulo+x_blanco+x_cid+x_masipsp+x_panbol+x_pst+x_mts+x_fpv+x_paso+x_mda;
+    console.log(x_total);
+
+    console.log(x_nulo);
+    console.log(x_blanco);
+    console.log(x_cid);
+    console.log(x_masipsp);
+    console.log(x_panbol);
+    console.log(x_pst);
+    console.log(x_mts);
+    console.log(x_fpv);
+    console.log(x_paso);
+    console.log(x_mda);
+    </script>
 
 {% endblock jssextras %}

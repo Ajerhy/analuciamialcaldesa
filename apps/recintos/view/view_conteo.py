@@ -12,7 +12,7 @@ from apps.usuarios.templatetags.utils import get_ip
 from django.db.models import Q
 from analuciamialcaldesa import settings
 from apps.recintos.models import Conteo
-#from apps.tecnico.forms import ProfesorForm
+from apps.recintos.forms.form_papeleta import PapeletaForm
 
 CONTEO_FIELDS = [
     {'string': 'N°'},
@@ -67,3 +67,13 @@ def MesaPapeletaView(request, pk):
         'listar_conteo': papeleta,
         'API_KEY': settings.API_KEY_GOOGLE_MAPS
     })
+
+class PapeletaCrearView(SuccessMessageMixin,LoginRequiredMixin,CreateView):
+    login_url = 'usuarios:index'
+    permission_required = "recintos.add_conteo"
+    model = Conteo
+    template_name = "ana/apps/recintos/conteo/formulario.html"
+    #context_object_name = "obj_usuarios"
+    form_class = PapeletaForm
+    success_url = reverse_lazy("recintos:listar_conteo")
+    success_message = "Llenado de Papeleta Creado Exitosamente"

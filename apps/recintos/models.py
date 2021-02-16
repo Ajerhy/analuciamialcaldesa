@@ -33,8 +33,8 @@ class Sufragio(EstadoModel):
         return "%s" % (self.tiposugrafio)
 
 class Conteo(EstadoModel):
-    delegadomesa = models.CharField(max_length=100, blank=False, null=True,verbose_name='Delegado de Mesa',help_text='Ingrese su Nombre o C.I')
-    presidentemesa = models.CharField(max_length=100, blank=False, null=True,verbose_name='Presidente de Mesa',help_text='Ingrese su Nombre o C.I')
+    delegadomesa = models.CharField(max_length=100, blank=True, null=True,verbose_name='Delegado de Mesa',help_text='Ingrese su Nombre o C.I')
+    presidentemesa = models.CharField(max_length=100, blank=True, null=True,verbose_name='Presidente de Mesa',help_text='Ingrese su Nombre o C.I')
 
     sufragio = models.ForeignKey(Sufragio, null=True, blank=True, on_delete=models.CASCADE)
     codigo_conteo = models.UUIDField('codigo_conteo', default=uuid.uuid4, unique=True, null=False, blank=False, editable=False)
