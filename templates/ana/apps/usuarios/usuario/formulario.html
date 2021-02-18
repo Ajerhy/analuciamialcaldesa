@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 {% load static %}
 {% load widget_tweaks %}
-{% block title %} Papeleta {% endblock title %}
+{% block title %} Usuario {% endblock title %}
 
 {% block csssextras %}
 {% endblock csssextras %}
@@ -10,13 +10,13 @@
     <!-- row -->
     <div class="row mb-1">
         <div class="col-sm-6">
-            <h5 class="m-0 text-dark">Formulario Papeleta
+            <h5 class="m-0 text-dark">Formulario Usuario
             </h5>
         </div><!-- /.col -->
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="">Dasboard</a></li>
-                <li class="breadcrumb-item active"> Papeleta </li>
+                <li class="breadcrumb-item active"> Usuario </li>
             </ol>
         </div><!-- /.col -->
     </div>
@@ -43,7 +43,6 @@
                     </div>
                 {% endfor %}
 
-
                 <div class="form-group ">
                     <label for="customFile">Imagen Selecionada :</label>
                     <div class="text-center mb-1 col-12">
@@ -51,7 +50,6 @@
                              height="100pd" width="100pd">
                     </div>
                 </div>
-
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 
@@ -63,7 +61,7 @@
 {% block jssextras %}
     <script>
         $(document).ready(() => {
-            $('#id_certificado_img').change(function () {
+            $('#id_usuario_img').change(function () {
                 const file = this.files[0];
                 console.log(file);
                 if (file) {
@@ -78,4 +76,3 @@
         });
     </script>
 {% endblock jssextras %}
-

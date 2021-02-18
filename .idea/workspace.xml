@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/formulario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/estadistica/barra.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/estadistica/barra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_usuario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/formulario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/listar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +43,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/estadistica" />
+    <property name="last_opened_file_path" value="D:/Desarrollo/Django/Curso/curso 104/app" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\usuarios\usuario" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\estadistica" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\conteo" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\analuciamialcaldesa\configuracion" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\geolocalizacion\municipio" />
-      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\apps\recintos\forms" />
     </key>
   </component>
   <component name="RunManager">
@@ -90,6 +96,7 @@
       <workItem from="1613430072569" duration="3074000" />
       <workItem from="1613496005908" duration="11827000" />
       <workItem from="1613524177327" duration="1290000" />
+      <workItem from="1613614223848" duration="3546000" />
     </task>
     <servers />
   </component>

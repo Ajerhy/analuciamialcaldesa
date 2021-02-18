@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.forms import PasswordResetForm
 from apps.usuarios.models import Usuario
 from apps.usuarios.templatetags.utils import ROLES
-from django.forms import *
+
 
 class UsuarioForm(ModelForm):
     def __init__(self, *args, **kwargs):
@@ -15,31 +15,36 @@ class UsuarioForm(ModelForm):
         model = Usuario
         fields = 'nombre', 'apellido', 'email', 'usuario', 'password', 'usuario_img',
         widgets = {
-            'nombre': TextInput(
+            'nombre': forms.TextInput(
                 attrs={
                     'placeholder': 'Ingrese sus nombres',
                 }
             ),
-            'apellido': TextInput(
+            'apellido': forms.TextInput(
                 attrs={
                     'placeholder': 'Ingrese sus apellidos',
                 }
             ),
-            'email': TextInput(
+            'email': forms.TextInput(
                 attrs={
                     'placeholder': 'Ingrese su email',
                 }
             ),
-            'usuario': TextInput(
+            'usuario': forms.TextInput(
                 attrs={
-                    'placeholder': 'Ingrese su username',
+                    'placeholder': 'Ingrese su Usuario',
                 }
             ),
-            'password': PasswordInput(render_value=True,
+            'password': forms.PasswordInput(render_value=True,
                 attrs={
                     'placeholder': 'Ingrese su password',
                 }
             ),
+            'groups': forms.SelectMultiple(attrs={
+                'class': 'form-control select2',
+                'style': 'width: 100%',
+                'multiple': 'multiple'
+            })
         }
         exclude = ['groups', 'user_permissions', 'last_login', 'date_joined', 'is_superuser', 'is_active', 'is_staff']
 
@@ -57,6 +62,9 @@ class UsuarioForm(ModelForm):
                     if user.password != pwd:
                         u.set_password(pwd)
                 u.save()
+                u.groups.clear()
+                for g in self.cleaned_data['groups']:
+                    u.groups.add(g)
             else:
                 data['error'] = form.errors
         except Exception as e:

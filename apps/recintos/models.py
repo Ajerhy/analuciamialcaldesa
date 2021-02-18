@@ -67,7 +67,7 @@ class Conteo(EstadoModel):
     verificacioncipapeleta = models.BooleanField(default=0, verbose_name='C.I. y Papeletas')
 
     #3 editable=False,
-    total = models.IntegerField(default=0,null=True,blank=True, verbose_name='Total de Votos Partidos')
+    total = models.IntegerField(default=0,null=True,blank=True, verbose_name='Total de Votos Validos')
     #total = models.FloatField(default=0)
 
     cerrarpapeleta = models.IntegerField(default=0, verbose_name='Papeleta Mesa')

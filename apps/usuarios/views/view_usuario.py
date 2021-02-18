@@ -12,6 +12,7 @@ from apps.usuarios.templatetags.utils import get_ip
 from django.db.models import Q
 from analuciamialcaldesa import settings
 from apps.usuarios.models import Usuario
+from apps.usuarios.forms.form_usuario import UsuarioForm
 from django.db.models import Sum
 
 USUARIO_FIELDS = [
@@ -39,3 +40,13 @@ class UsuarioListarView(LoginRequiredMixin,TemplateView):
         context["listar_usuario"] = usuariotodo
         context["API_KEY"] = settings.API_KEY_GOOGLE_MAPS
         return context
+
+class UsuarioCrearView(SuccessMessageMixin,LoginRequiredMixin,CreateView):
+    login_url = 'usuarios:index'
+    permission_required = "usuarios.add_usuario"
+    model = Usuario
+    template_name = "ana/apps/usuarios/usuario/formulario.html"
+    #context_object_name = "obj_usuarios"
+    form_class = UsuarioForm
+    success_url = reverse_lazy("usuarios:listar_usuario")
+    success_message = "Usuario Creado Exitosamente"

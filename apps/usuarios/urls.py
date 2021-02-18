@@ -3,7 +3,7 @@ from django.urls import path
 from apps.usuarios.views.view_login import LoginView,DashboarView,LogoutView,DashboardSinPrivilegio,\
     LineaView,BarraView,ResultadoView
 
-from apps.usuarios.views.view_usuario import UsuarioListarView
+from apps.usuarios.views.view_usuario import UsuarioListarView,UsuarioCrearView
 
 app_name = 'usuarios'
 
@@ -21,5 +21,6 @@ urlpatterns = [
     path('sin/privilegio/', DashboardSinPrivilegio.as_view(), name='sinprivilegio'),
 
     path('listar/usuario/', UsuarioListarView.as_view(), name='listar_usuario'),
+    path('crear/usuario/', UsuarioCrearView.as_view(), name='crear_usuario'),
 ]
 #login/

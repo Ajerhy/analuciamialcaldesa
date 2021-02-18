@@ -8,7 +8,7 @@ class PapeletaForm(forms.ModelForm):
                 'totalpapeletas','votovalidos',
                 'votonullo','votoblanco',
                 'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
-                'papeletasobreante','carnetssobrantes',
+                'papeletasobreante','carnetssobrantes','certificado_img',
                 'ubicacion']
       #fields = '__all__'
 
