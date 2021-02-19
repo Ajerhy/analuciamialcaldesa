@@ -19,7 +19,7 @@ class PersonalizadaUserAdmin(UserAdmin,ImportExportModelAdmin):
         (None, {
             'fields': ('usuario', 'password1', 'password2'),
         }),)
-    list_display = ('usuario', 'email', 'is_active', 'is_staff')
+    list_display = ('usuario', 'email', 'is_active', 'is_staff','last_login')
     # 'password',
     search_fields = ('usuario',)
     ordering = ('usuario',)
