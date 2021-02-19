@@ -97,3 +97,7 @@ class Conteo(EstadoModel):
         #4
         self.cerrarpapeleta = self.marcadopapeleta + self.nropapeletasobrante
         super(Conteo,self).save()
+
+    class Meta:
+        ordering = ['-creacion']
+        verbose_name_plural = "Papeletas"

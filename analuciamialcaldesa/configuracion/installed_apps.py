@@ -6,9 +6,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'apps.militantes',
     'apps.usuarios',
     'apps.geolocalizacion',
-    'apps.militantes',
     'apps.candidatos',
     'apps.recintos',
 

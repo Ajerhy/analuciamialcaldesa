@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/formulario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/installed_apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/installed_apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/candidatos/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/candidatos/migrations/0002_auto_20210214_1104.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/candidatos/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geolocalizacion/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geolocalizacion/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/militantes/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/militantes/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/migrations/0002_mesa_codigomesa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/migrations/0003_auto_20210215_0100.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/migrations/0004_auto_20210215_1127.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/migrations/0005_conteo_cerrarpapeleta.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/migrations/0006_conteo_certificado_img.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_usuario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/formulario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/listar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/archivo/Barrio-2021-02-14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/archivo/Departamentos-2021-02-14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/archivo/Distrito-2021-02-14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/archivo/Localidad-2021-02-14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/archivo/Municipios-2021-02-14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/archivo/Provincias-2021-02-14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/archivo/Recinto-2021-02-14.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Desarrollo/Django/Curso/curso 104/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -96,7 +115,8 @@
       <workItem from="1613430072569" duration="3074000" />
       <workItem from="1613496005908" duration="11827000" />
       <workItem from="1613524177327" duration="1290000" />
-      <workItem from="1613614223848" duration="3546000" />
+      <workItem from="1613614223848" duration="3810000" />
+      <workItem from="1613703404949" duration="2409000" />
     </task>
     <servers />
   </component>

@@ -33,6 +33,11 @@ class EstadoModel(models.Model):
     class Meta:
         abstract = True
 
+class Codigo(EstadoModel):
+    codigopais = models.CharField('Codigo de Pais', max_length=10)
+    def __str__(self):
+        return "%s" % (self.codigopais)
+
 class UserManager(BaseUserManager):
     def create_user(self, usuario, email, password):
         if not email:
@@ -62,6 +67,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     nombre = models.CharField('Nombres', max_length=50)
     apellido = models.CharField('Apellidos', max_length=50)
     date_joined = models.DateTimeField(default=timezone.now)
+    codigo = models.ForeignKey(Codigo, null=True, blank=True, on_delete=models.CASCADE)
     telefono = models.CharField(max_length=10, blank=True, null=True, verbose_name='Telefono')
     usuario_img = models.ImageField(verbose_name='Imagen de Usuario', upload_to='usuario/%Y/%m/%d/', blank=True,null=True)
     roles = models.CharField(max_length=2, choices=ROLES, default='2')
