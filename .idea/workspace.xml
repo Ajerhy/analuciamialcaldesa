@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/installed_apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/installed_apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/candidatos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/candidatos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geolocalizacion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geolocalizacion/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/militantes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/militantes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/usuarios/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/base/archivo/Usuario.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/archivo/Usuario.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/formulario.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Nueva carpeta/Recovered data 11-21-2020 at 00_08_56/NTFS 1/Other lost files/PycharmProjects/geopuntospando" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -91,7 +98,10 @@
       <workItem from="1613496005908" duration="11827000" />
       <workItem from="1613524177327" duration="1290000" />
       <workItem from="1613614223848" duration="3810000" />
-      <workItem from="1613703404949" duration="2980000" />
+      <workItem from="1613703404949" duration="3582000" />
+      <workItem from="1613860658886" duration="132000" />
+      <workItem from="1613861303747" duration="876000" />
+      <workItem from="1613905581077" duration="1728000" />
     </task>
     <servers />
   </component>

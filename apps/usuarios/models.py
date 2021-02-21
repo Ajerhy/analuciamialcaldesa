@@ -14,7 +14,7 @@ from rest_framework.authtoken.models import Token
 from django.forms import model_to_dict
 from crum import get_current_request
 from analuciamialcaldesa.settings import MEDIA_URL, STATIC_URL
-
+from apps.recintos.models import Mesa
 
 class EstadoModel(models.Model):
     #id = models.UUIDField('id', default=uuid.uuid4, primary_key=True, unique=True, null=False, blank=False,editable=False)
@@ -71,6 +71,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     telefono = models.CharField(max_length=10, blank=True, null=True, verbose_name='Telefono')
     usuario_img = models.ImageField(verbose_name='Imagen de Usuario', upload_to='usuario/%Y/%m/%d/', blank=True,null=True)
     roles = models.CharField(max_length=2, choices=ROLES, default='2')
+    mesa = models.ManyToManyField(Mesa, blank=True)
     objects = UserManager()
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)

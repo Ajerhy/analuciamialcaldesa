@@ -13,7 +13,7 @@ class UsuarioForm(ModelForm):
 
     class Meta:
         model = Usuario
-        fields = 'nombre', 'apellido', 'email', 'usuario', 'password', 'usuario_img',
+        fields = 'nombre', 'apellido', 'email','telefono', 'usuario', 'password', 'mesa', 'groups', 'usuario_img',
         widgets = {
             'nombre': forms.TextInput(
                 attrs={
@@ -30,6 +30,11 @@ class UsuarioForm(ModelForm):
                     'placeholder': 'Ingrese su email',
                 }
             ),
+            'telefono': forms.TextInput(
+                attrs={
+                    'placeholder': 'Ingrese su Telefono',
+                }
+            ),
             'usuario': forms.TextInput(
                 attrs={
                     'placeholder': 'Ingrese su Usuario',
@@ -39,7 +44,13 @@ class UsuarioForm(ModelForm):
                 attrs={
                     'placeholder': 'Ingrese su password',
                 }
-            ),
+            )
+            ,
+            'mesa': forms.SelectMultiple(attrs={
+                'class': 'form-control select2',
+                'style': 'width: 100%',
+                'multiple': 'multiple'
+            }),
             'groups': forms.SelectMultiple(attrs={
                 'class': 'form-control select2',
                 'style': 'width: 100%',

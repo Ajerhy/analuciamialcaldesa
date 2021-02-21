@@ -32,6 +32,7 @@ class PersonalizadaUserAdmin(UserAdmin,ImportExportModelAdmin):
                                             'codigo',
                                             'telefono',
                                             'roles',
+                                            'mesa',
                                             'usuario_img',
                                             'observaciones'
                                             )}),

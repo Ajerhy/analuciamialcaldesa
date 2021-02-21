@@ -60,6 +60,21 @@
 
 {% block jssextras %}
     <script>
+
+        $(function () {
+        $("#sidebarToggle").click();
+        //$("#id_barrio1").select2();
+
+        $("#id_mesa").select2({
+            theme: "bootstrap4",
+            language: 'es',
+            //allowClear: true,
+            placeholder: 'Ingrese su Mesa',
+            //maximumSelectionLength: 1
+        });
+    });
+
+
         $(document).ready(() => {
             $('#id_usuario_img').change(function () {
                 const file = this.files[0];
@@ -74,5 +89,12 @@
                 }
             });
         });
+
+
+
+
+
+
+
     </script>
 {% endblock jssextras %}

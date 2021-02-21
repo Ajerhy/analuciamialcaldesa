@@ -1,5 +1,4 @@
 from django.db import models
-#from apps.geolocalizacion.models import Direccion
 from apps.usuarios.templatetags.utils import SEXOS,TIPO_SOCIO,VOTAR
 import uuid
 from apps.usuarios.models import Usuario,EstadoModel
