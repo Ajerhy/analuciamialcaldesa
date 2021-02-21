@@ -71,10 +71,11 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     telefono = models.CharField(max_length=10, blank=True, null=True, verbose_name='Telefono')
     usuario_img = models.ImageField(verbose_name='Imagen de Usuario', upload_to='usuario/%Y/%m/%d/', blank=True,null=True)
     roles = models.CharField(max_length=2, choices=ROLES, default='2')
-    mesa = models.ManyToManyField(Mesa, blank=True)
+    mesas = models.ManyToManyField(Mesa,blank=True)
     objects = UserManager()
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+    direccion_ip = models.GenericIPAddressField(blank=True, null=True)
 
     USERNAME_FIELD = 'usuario'
     REQUIRED_FIELDS = ['email', ]

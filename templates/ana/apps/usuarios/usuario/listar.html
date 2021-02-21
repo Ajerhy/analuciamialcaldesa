@@ -48,8 +48,20 @@
                               <td> {{ forloop.counter }} </td>
                               <td class="h6">{{ u.usuario }}</td>
                               <td class="h6">{{ u.email }}</td>
-                              <td class="h6">{{ u.usuario }}</td>
-                              <td class="h6">{{ u.groups.auth.Group|default_if_none:"" }}</td>
+                              <td class="h6">
+                                  {% for g in u.groups.all %}
+                                      <span class="badge badge-success">
+                                      {{ g.name }}
+                                      </span>
+                                  {% endfor %}
+                              </td>
+                              <td class="h6 text-center">
+                                  {% for mesa in u.mesa.all %}
+                                      <span class="right badge badge-primary">
+                                          {{ mesa.recinto.nombrerecinto }} {{ mesa.numeromesa }}
+                                      </span>
+                                  {% endfor %}
+                              </td>
 
                               {% if u.is_active == True %}
                                   <td class="text-center">
@@ -72,12 +84,18 @@
                                       <div class="dropdown-menu" role="menu" x-placement="bottom-start"
                                            style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(68px, 38px, 0px);">
 
-                                          <a class="dropdown-item" target="_blank" href="https://api.whatsapp.com/send?phone=+591{{ u.telefono }}">
+                                          <a class="dropdown-item" target="_blank" href="https://api.whatsapp.com/send?phone={{ u.codigo.codigopais }}{{ u.telefono }}">
                                               <i class="fab fa-whatsapp"></i>
                                               Llamar</a>
 
-                                          <a class="dropdown-item" href="#">Another action</a>
-                                          <a class="dropdown-item" href="#">Something else here</a>
+                                          <a class="dropdown-item" href="{% url 'usuarios:editar_usuario' u.id %}">
+                                              <i class="far fa-edit"></i>
+                                              Editar
+                                          </a>
+                                          <a class="dropdown-item" href="{% url 'usuarios:eliminar_usuario' u.id %}">
+                                              <i class="far fa-trash-alt"></i>
+                                              Eliminar
+                                          </a>
                                           <div class="dropdown-divider"></div>
                                           <a class="dropdown-item" href="#">Separated link</a>
                                       </div>

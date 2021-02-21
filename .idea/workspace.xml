@@ -2,16 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/eliminar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/perfil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/notificacion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/analuciamialcaldesa.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Django_Lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/installed_apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/analuciamialcaldesa/configuracion/installed_apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/candidatos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/candidatos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geolocalizacion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geolocalizacion/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/militantes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/militantes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_usuario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info-deploy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info-deploy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base/js/sb-admin-2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/js/sb-admin-2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/formulario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/listar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/navbar-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/navbar-nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/static/base_dasboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/static/base_dasboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/topbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -41,19 +57,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Nueva carpeta/Recovered data 11-21-2020 at 00_08_56/NTFS 1/Other lost files/PycharmProjects/geopuntospando" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/base" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\base" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\usuarios\usuario" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\estadistica" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\conteo" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\analuciamialcaldesa\configuracion" />
-      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\geolocalizacion\municipio" />
     </key>
   </component>
   <component name="RunManager">
@@ -102,6 +120,9 @@
       <workItem from="1613860658886" duration="132000" />
       <workItem from="1613861303747" duration="876000" />
       <workItem from="1613905581077" duration="1728000" />
+      <workItem from="1613912437283" duration="3357000" />
+      <workItem from="1613915874478" duration="1239000" />
+      <workItem from="1613923689265" duration="9475000" />
     </task>
     <servers />
   </component>

@@ -1,178 +1,183 @@
 {% load static %}
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'usuarios:index' %}" data-toggle="tooltip" data-placement="bottom" title="P-Conteo Boca de Urna">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'usuarios:index' %}"
+       data-toggle="tooltip" data-placement="bottom" title="P-Conteo Boca de Urna">
         <div class="sidebar-brand-icon rotate-n-15">
 
-            <img src="{% static 'favicon.ico' %}"  alt="Imagen de usuario" height="40" width="40" class="img-profile rounded-circle" />
+            <img src="{% static 'favicon.ico' %}" alt="Imagen de usuario" height="40" width="40"
+                 class="img-profile rounded-circle"/>
 
             <!--i class="fas fa-house-damage"></i-->
             <!--i class="fas fa-laugh-wink"></i-->
         </div>
         <div class="sidebar-brand-text mx-3">PConteo<sup>BU</sup></div>
-      </a>
+    </a>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
         <a class="nav-link" href="{% url 'usuarios:dashboard' %}">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
-      <!-- Contrato -->
-      <div class="sidebar-heading">
+    <!-- Contrato -->
+    <div class="sidebar-heading">
         Votante
-      </div>
+    </div>
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Voto" aria-expanded="true"
-               aria-controls="Voto">
-                <i class="fas fa-person-booth"></i>
-                <span>Voto</span>
-            </a>
-            <div id="Voto" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Gestion Votante:</h6>
-                    <a class="collapse-item" href="{% url 'recintos:listar_recinto' %}">Recinto</a>
-                    <a class="collapse-item" href="{% url 'recintos:listar_mesa' %}">Mesa</a>
-                     <a class="collapse-item" href="{% url 'recintos:listar_conteo' %}">Papeleta</a>
-                </div>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Voto" aria-expanded="true"
+           aria-controls="Voto">
+            <i class="fas fa-person-booth"></i>
+            <span>Voto</span>
+        </a>
+        <div id="Voto" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Gestion Votante:</h6>
+                <a class="collapse-item" href="{% url 'recintos:listar_recinto' %}">Recinto</a>
+                <a class="collapse-item" href="{% url 'recintos:listar_mesa' %}">Mesa</a>
+                <a class="collapse-item" href="{% url 'recintos:listar_conteo' %}">Papeleta</a>
             </div>
-        </li>
+        </div>
+    </li>
 
-        <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'usuarios:resultado' %}">
             <!--i class="fas fa-check-double"></i-->
             <i class="fas fa-chart-pie"></i>
             <span>Resultados Torta</span></a>
-      </li>
+    </li>
 
 
-        <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'usuarios:linea' %}">
             <i class="fas fa-chart-bar"></i>
             <span>Resultados Linea</span></a>
-      </li>
+    </li>
 
-<li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'usuarios:barra' %}">
             <i class="fas fa-chart-line"></i>
             <span>Resultados Barra</span></a>
-      </li>
+    </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
-      <!-- Contrato -->
-      <div class="sidebar-heading">
+    <!-- Contrato -->
+    <div class="sidebar-heading">
         Partido
-      </div>
+    </div>
 
-      <!-- Nav Item - Contrato -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fa fa-file nav-icon"></i>
-          <span>Militantes</span>
+    <!-- Nav Item - Contrato -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+           aria-controls="collapseTwo">
+            <i class="fa fa-file nav-icon"></i>
+            <span>Militantes</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Gestion Militantes:</h6>
-              <a class="collapse-item" href="#">Personas</a>
-              <a class="collapse-item" href="#">Militantes</a>
-          </div>
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Gestion Militantes:</h6>
+                <a class="collapse-item" href="#">Personas</a>
+                <a class="collapse-item" href="#">Militantes</a>
+            </div>
         </div>
-      </li>
+    </li>
 
 
-      <!-- Nav Item - Terreno -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+    <!-- Nav Item - Terreno -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+           aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fa fa-cube nav-icon"></i>
-          <span>Anforas</span>
+            <span>Anforas</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Gestion de Anforas:</h6>
-            <a class="collapse-item" href="#">Anforas</a>
-          </div>
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Gestion de Anforas:</h6>
+                <a class="collapse-item" href="#">Anforas</a>
+            </div>
         </div>
-      </li>
+    </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
+    <!-- Heading -->
+    <div class="sidebar-heading">
         Informacion
-      </div>
+    </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - Pages Collapse Menu -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Configuracion</span>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+           aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Configuracion</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
+            <div class="bg-white py-2 collapse-inner rounded">
 
-            <h6 class="collapse-header">Gestion de Usuarios</h6>
-              <a class="collapse-item" href="{% url 'usuarios:listar_usuario' %}">Usuarios</a>
-              <a class="collapse-item" href="#">Perfiles</a>
+                <h6 class="collapse-header">Gestion de Usuarios</h6>
+                <a class="collapse-item" href="{% url 'usuarios:listar_usuario' %}">Usuarios</a>
+                <a class="collapse-item" href="#">Perfiles</a>
 
-          </div>
+            </div>
         </div>
-      </li>
+    </li>
 
 
-      <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="fas fa-layer-group"></i>
             <span>Candidatos</span></a>
-      </li>
+    </li>
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Ubicacion" aria-expanded="true"
-               aria-controls="Ubicacion">
-                <i class="fas fa-map-marked"></i>
-                <span>Localizacion</span>
-            </a>
-            <div id="Ubicacion" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Gestion de Localizacion:</h6>
-                    <a class="collapse-item" href="{% url 'geolocalizacion:listar_municipio' %}">Municipio</a>
-                    <a class="collapse-item" href="{% url 'geolocalizacion:listar_localidad' %}">Localidad</a>
-                    <a class="collapse-item" href="#">Distrito</a>
-                    <a class="collapse-item" href="#">Barrio</a>
-                    <a class="collapse-item" href="#">Recinto</a>
-                </div>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Ubicacion" aria-expanded="true"
+           aria-controls="Ubicacion">
+            <i class="fas fa-map-marked"></i>
+            <span>Localizacion</span>
+        </a>
+        <div id="Ubicacion" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Gestion de Localizacion:</h6>
+                <a class="collapse-item" href="{% url 'geolocalizacion:listar_municipio' %}">Municipio</a>
+                <a class="collapse-item" href="{% url 'geolocalizacion:listar_localidad' %}">Localidad</a>
+                <a class="collapse-item" href="#">Distrito</a>
+                <a class="collapse-item" href="#">Barrio</a>
+                <a class="collapse-item" href="#">Recinto</a>
             </div>
-        </li>
+        </div>
+    </li>
 
 
-      <!--
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
-      </li>
-      -->
+    <!--
+    <li class="nav-item">
+      <a class="nav-link" href="tables.html">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Tables</span></a>
+    </li>
+    -->
 
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
 
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
+    </div>
 
-    </ul>
+</ul>
     <!-- End of Sidebar -->

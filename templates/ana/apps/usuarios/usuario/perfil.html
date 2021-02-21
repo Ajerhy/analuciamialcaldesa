@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 {% load static %}
 {% load widget_tweaks %}
-{% block title %} Usuario {% endblock title %}
+{% block title %} Perfil de Usuario {% endblock title %}
 
 {% block csssextras %}
 {% endblock csssextras %}
@@ -11,14 +11,7 @@
     <div class="row mb-1">
         <div class="col-sm-6">
             <h5 class="m-0 text-dark">
-                Formulario
-                {% if obj %}
-                    Editar
-                {% else %}
-                    Crear
-                {% endif %}
-                    Usuario
-
+                Perfil de Usuario
             </h5>
         </div><!-- /.col -->
         <div class="col-sm-6">
@@ -61,7 +54,7 @@
                 <div class="row">
                         <div class="col">
                             <button type="submit" class="btn btn-danger"><span class="fa fa-save"></span> Guardar</button>
-                            <a href="{% url 'usuarios:listar_usuario' %}" class="btn btn-success"><span class="fa fa-undo"></span>Cancelar</a>
+                            <a href="{% url 'usuarios:dashboard' %}" class="btn btn-success"><span class="fa fa-undo"></span>Cancelar</a>
                         </div>
                     </div>
             </form>
@@ -78,7 +71,7 @@
         $("#sidebarToggle").click();
         //$("#id_barrio1").select2();
 
-        $("#id_mesas").select2({
+        $("#id_mesa").select2({
             theme: "bootstrap4",
             language: 'es',
             allowClear: true,

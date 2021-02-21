@@ -157,3 +157,8 @@ class GrupoCambioUsuario(LoginRequiredMixin, View):
         except:
             pass
         return HttpResponseRedirect(reverse_lazy("usuarios:dashboard"))
+
+
+class PapeletaView(LoginRequiredMixin,TemplateView):
+    login_url = 'usuarios:index'
+    template_name = "ana/apps/papeleta/papeleta.html"
