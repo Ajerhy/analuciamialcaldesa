@@ -123,7 +123,8 @@ class LineaView(LoginRequiredMixin,TemplateView):
         context["fpv"] = Conteo.objects.aggregate(Sum('votofpv'))
         context["paso"] = Conteo.objects.aggregate(Sum('votopaso'))
         context["mda"] = Conteo.objects.aggregate(Sum('votomda'))
-        context["total"] = Conteo.objects.aggregate(Sum('marcadopapeleta'))
+        context["total_papeleta"] = Conteo.objects.aggregate(Sum('marcadopapeleta'))
+        context["total"] = Conteo.objects.aggregate(Sum('total'))
         return context
 
 
