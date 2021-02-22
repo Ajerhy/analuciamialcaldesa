@@ -3,19 +3,16 @@
 {% block title %}Menu{% endblock title %}
 {% block contenido %}
     <h1 class="h3 mb-1 text-gray-800">Mesa Votacion</h1>
-    <p class="mb-4">Bootstrap's default utility classes can be found on the official <a
-            href="https://getbootstrap.com/docs">Bootstrap Documentation</a> page. The custom utilities
-        below were created to extend this theme past the default utility classes built into Bootstrap's
-        framework.</p>
+    <p class="mb-4">Lista de LLenado de Actas para Usuarios.</p>
 
 
-<div class="container">
+<div class="content">
 
     <div class="row">
         <div class="col-xl-6 col-md-6 mb-1">
             <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
-                    <a href="{% url 'recintos:crear_papeleta' %}">
+                    <a href="{% url 'recintos:crear_papeleta_usuario' %}">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
@@ -34,7 +31,7 @@
         <div class="col-xl-6 col-md-6 mb-1">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
-                    <a href="{% url 'recintos:crear_papeleta' %}">
+                    <a href="{% url 'recintos:crear_papeleta_usuario' %}">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
@@ -52,7 +49,7 @@
         </div>
     </div>
 
-
+<!--
     <div class="row">
 
         <div class="col-lg-4 col-md-6 mb-4">
@@ -158,7 +155,7 @@
         </div>
 
     </div>
-
+-->
 </div>
 
 {% endblock contenido %}

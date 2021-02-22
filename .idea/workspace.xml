@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/detalle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/recinto/detalle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/imagen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recintos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recintos/view/view_conteo.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/view/view_conteo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recintos/view/view_recinto.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/view/view_recinto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/view/view_papeleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/view/view_papeleta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/0002_auto_20210221_0716.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/0003_usuario_direccion_ip.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/0004_auto_20210221_1317.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/formulario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/detalle.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/listar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/apps/recintos/conteo" />
+    <property name="last_opened_file_path" value="D:/Desarrollo/Libre/proyectosigetebr" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -110,6 +115,8 @@
       <workItem from="1613942209874" duration="49000" />
       <workItem from="1613951313764" duration="2757000" />
       <workItem from="1613963265729" duration="6221000" />
+      <workItem from="1614031899018" duration="968000" />
+      <workItem from="1614033247295" duration="2354000" />
     </task>
     <servers />
   </component>

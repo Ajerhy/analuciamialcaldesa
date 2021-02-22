@@ -83,3 +83,9 @@ class ConteoDetalleView(LoginRequiredMixin,DetailView):
     template_name = "ana/apps/recintos/conteo/detalle.html"
     context_object_name = "obj"
     login_url = 'usuarios:index'
+
+class ImagenActaDetalleView(LoginRequiredMixin,DetailView):
+    model = Conteo
+    template_name = "ana/apps/recintos/conteo/imagen.html"
+    context_object_name = "obj"
+    login_url = 'usuarios:index'

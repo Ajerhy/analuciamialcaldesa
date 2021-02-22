@@ -14,7 +14,7 @@ from analuciamialcaldesa import settings
 from apps.recintos.models import Conteo
 from apps.recintos.forms.form_papeleta import PapeletaForm
 
-class PapeletaCrearView(SuccessMessageMixin,LoginRequiredMixin,CreateView):
+class PapeletaUsuarioCrearView(SuccessMessageMixin,LoginRequiredMixin,CreateView):
     login_url = 'usuarios:index'
     permission_required = "recintos.add_conteo"
     model = Conteo
