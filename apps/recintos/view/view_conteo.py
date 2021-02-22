@@ -77,3 +77,9 @@ class PapeletaCrearView(SuccessMessageMixin,LoginRequiredMixin,CreateView):
     form_class = PapeletaForm
     success_url = reverse_lazy("recintos:listar_conteo")
     success_message = "Llenado de Papeleta Creado Exitosamente"
+
+class ConteoDetalleView(LoginRequiredMixin,DetailView):
+    model = Conteo
+    template_name = "ana/apps/recintos/conteo/detalle.html"
+    context_object_name = "obj"
+    login_url = 'usuarios:index'

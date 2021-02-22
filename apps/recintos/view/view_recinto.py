@@ -44,3 +44,9 @@ class RecintoListarView(LoginRequiredMixin,TemplateView):
         context["listar_recinto"] = recintotodo
         context["API_KEY"] = settings.API_KEY_GOOGLE_MAPS
         return context
+
+class RecintoDetalleView(LoginRequiredMixin,DetailView):
+    model = Recinto
+    template_name = "ana/apps/recintos/recinto/detalle.html"
+    context_object_name = "obj"
+    login_url = 'usuarios:index'

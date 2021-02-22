@@ -89,7 +89,7 @@ class Conteo(EstadoModel):
 
     cerrarpapeleta = models.IntegerField(default=0, verbose_name='Papeleta Mesa')
 
-    certificado_img = models.ImageField(verbose_name='Imagen de Certificado', upload_to='certificado/%Y/%m/%d/', blank=True,
+    certificado_img = models.ImageField(verbose_name='Imagen de Certificado', upload_to='certificado/%Y/%m/%d/%h', blank=True,
                                     null=True)
 
     ubicacion = models.ForeignKey(Ubicacion, null=True, blank=True, on_delete=models.CASCADE)

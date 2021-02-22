@@ -1,0 +1,129 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Detalle Papeleta{% endblock title %}
+
+{% block csssextras %}
+{% endblock csssextras %}
+
+{% block page-title %}
+    <!-- row -->
+    <div class="row mb-1">
+        <div class="col-sm-6">
+            <h5 class="m-0 text-dark">Detalle Papeletas
+            </h5>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="">Dasboard</a></li>
+                <li class="breadcrumb-item active"> Papeletas </li>
+            </ol>
+        </div><!-- /.col -->
+    </div>
+    <!-- /.row -->
+{% endblock page-title %}
+
+{% block contenido %}
+
+    <div class="row">
+
+
+        <div class="col-lg-12">
+
+
+            <!-- Collapsable Card Example -->
+            <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
+                   role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                    <h6 class="m-0 font-weight-bold text-primary">{{ obj.sufragio.tiposugrafio }} {{ obj.mesa.recinto.nombrerecinto }} -
+                        <strong>{{ obj.mesa.numeromesa }}</strong>
+                        Habilitados {{ obj.mesa.mesahabilitado }}
+                    </h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="collapseCardExample">
+                    <div class="card-body">
+                        <!--
+                        This is a collapsable card example using Bootstrap's built in collapse
+                        functionality. <strong>Click on the card header</strong> to see the card body
+                        collapse and expand!
+                        -->
+                        <div class="row">
+                            <div class="col-7">
+                                <!--img class="img-thumbnail" src="{% static 'img/user.png' %}" alt=""-->
+
+                                {% if not obj.certificado_img %}
+                                    <img src="{% static 'img/user.png' %}" alt="Imagen de Certificado" class="img-thumbnail"/>
+                                {% else %}
+                                    <img src="{{ obj.certificado_img.url }}" alt="{{ obj.id }}" class="img-thumbnail"/>
+                                {% endif %}
+
+                            </div>
+                            <div class="col-5">
+                                <div class="text-center">Detalle Votos</div>
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                        <th>VOTOS</th>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>VOTOS VALIDOS</th>
+                                        <td>{{ obj.votovalidos }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>NULO</th>
+                                        <td>{{ obj.votonullo }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>BLANCO</th>
+                                        <td>{{ obj.votoblanco }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>CID</th>
+                                        <td>{{ obj.votocid }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>MAS IPSP</th>
+                                        <td>{{ obj.votomasipsp }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>PAN-BOL</th>
+                                        <td>{{ obj.votopanbol }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>PST</th>
+                                        <td>{{ obj.votopst }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>MTS</th>
+                                        <td>{{ obj.votomts }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>FPV</th>
+                                        <td>{{ obj.votofpv }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>PASO</th>
+                                        <td>{{ obj.votopaso }}</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th>MDA</th>
+                                        <td>{{ obj.votomda }}</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock contenido %}

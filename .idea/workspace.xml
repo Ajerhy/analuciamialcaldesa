@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/recintos/view/view_papeleta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/formulario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/analuciamialcaldesa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/analuciamialcaldesa.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/detalle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/recinto/detalle.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/view/view_conteo.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/view/view_conteo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/view/view_recinto.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/view/view_recinto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/formulario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/listar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +47,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/apps/papeleta" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/apps/recintos/conteo" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\conteo" />
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\recinto" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\papeleta" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\base" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\usuarios\usuario" />
-      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\estadistica" />
-      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\conteo" />
     </key>
   </component>
   <component name="RunManager">
@@ -105,6 +109,7 @@
       <workItem from="1613923689265" duration="9475000" />
       <workItem from="1613942209874" duration="49000" />
       <workItem from="1613951313764" duration="2757000" />
+      <workItem from="1613963265729" duration="6221000" />
     </task>
     <servers />
   </component>
