@@ -2,31 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/eliminar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/perfil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base/notificacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/analuciamialcaldesa.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Django_Lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/recintos/view/view_papeleta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/formulario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/analuciamialcaldesa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/analuciamialcaldesa.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms/form_usuario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/view_usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views/view_usuario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info-deploy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info-deploy.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/base/js/sb-admin-2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/js/sb-admin-2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/formulario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/listar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/usuarios/usuario/listar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/navbar-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/navbar-nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/static/base_dasboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/static/base_dasboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/topbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -62,16 +43,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/base" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/ana/apps/papeleta" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\papeleta" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\base" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\usuarios\usuario" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\estadistica" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\conteo" />
-      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\analuciamialcaldesa\configuracion" />
     </key>
   </component>
   <component name="RunManager">
@@ -81,7 +62,6 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="analuciamialcaldesa.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -123,6 +103,8 @@
       <workItem from="1613912437283" duration="3357000" />
       <workItem from="1613915874478" duration="1239000" />
       <workItem from="1613923689265" duration="9475000" />
+      <workItem from="1613942209874" duration="49000" />
+      <workItem from="1613951313764" duration="2757000" />
     </task>
     <servers />
   </component>

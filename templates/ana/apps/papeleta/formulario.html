@@ -1,0 +1,64 @@
+{% extends "ana/apps/papeleta/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %} Papeleta {% endblock title %}
+
+{% block csssextras %}
+{% endblock csssextras %}
+
+{% block contenido %}
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <!--div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+        </div-->
+        <div class="card-body">
+
+            <form method="post" action="." enctype="multipart/form-data">
+                {% csrf_token %}
+                <!--
+                      {{ form.as_p }}
+                      -->
+                {% for field in form.visible_fields %}
+                    <div class="form-group">
+                        <label for="email">{{ field.label }}:</label>
+                        {{ field|add_class:'form-control'|attr:'autocomplete:off' }}
+                    </div>
+                {% endfor %}
+
+
+                <div class="form-group ">
+                    <label for="customFile">Imagen Selecionada :</label>
+                    <div class="text-center mb-1 col-12">
+                        <img src="{% static 'favicon.ico' %}" class="imgPreview"
+                             height="100pd" width="100pd">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <!-- DataTales -->
+{% endblock contenido %}
+
+{% block jssextras %}
+    <script>
+        $(document).ready(() => {
+            $('#id_certificado_img').change(function () {
+                const file = this.files[0];
+                console.log(file);
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        console.log(event.target.result);
+                        $('.imgPreview').attr('src', event.target.result);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+{% endblock jssextras %}
+
