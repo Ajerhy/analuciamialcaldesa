@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/base/js/jquery.chained.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/base/js/jquery.chained.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/recintos/view/view_papeleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/view/view_papeleta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/formulario.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +50,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\static\base\js" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\conteo" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\recintos\recinto" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\papeleta" />
       <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\base" />
-      <recent name="C:\Users\Acer\PycharmProjects\analuciamialcaldesa\templates\ana\apps\usuarios\usuario" />
     </key>
   </component>
   <component name="RunManager">
@@ -108,7 +113,7 @@
       <workItem from="1614129534037" duration="2967000" />
       <workItem from="1614217804773" duration="1465000" />
       <workItem from="1614224333536" duration="6059000" />
-      <workItem from="1614312363148" duration="4711000" />
+      <workItem from="1614312363148" duration="8320000" />
     </task>
     <servers />
   </component>

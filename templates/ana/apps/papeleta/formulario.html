@@ -16,8 +16,8 @@
 
             <form method="post" action="." enctype="multipart/form-data">
                 {% csrf_token %}
-                <!--
-                      {{ form.as_p }}
+                <!--#
+                      {#{ form.as_p }#}
                       -->
                 {% for field in form.visible_fields %}
                     <div class="form-group">
@@ -54,27 +54,37 @@
     <!-- DataTales -->
 {% endblock contenido %}
 
+
+
 {% block jssextras %}
     <script>
-$(function(){
-    $(".validar").keydown(function(event){
-        //alert(event.keyCode);
-        if((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105) && event.keyCode !==190  && event.keyCode !==110 && event.keyCode !==8 && event.keyCode !==9  ){
-            return false;
-        }
+    //id_mesa
+    $(function (){
+        //$("#series").chained("#mark"); /* or $("#series").chainedTo("#mark");
+        $("#id_totalpapeletas").chained("#id_mesa");
     });
-});
+    </script>
 
-    $(function () {
-        $("#sidebarToggle").click();
-        $("#id_mesa").select2({
-            theme: "bootstrap4",
-            language: 'es',
-            //allowClear: true,
-            placeholder: 'Ingrese su Mesa Recinto',
-            //maximumSelectionLength: 1
+    <script>
+        $(function () {
+            $(".validar").keydown(function (event) {
+                //alert(event.keyCode);
+                if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105) && event.keyCode !== 190 && event.keyCode !== 110 && event.keyCode !== 8 && event.keyCode !== 9) {
+                    return false;
+                }
+            });
         });
-    });
+
+        $(function () {
+            $("#sidebarToggle").click();
+            $("#id_mesa").select2({
+                theme: "bootstrap4",
+                language: 'es',
+                //allowClear: true,
+                placeholder: 'Ingrese su Mesa Recinto',
+                //maximumSelectionLength: 1
+            });
+        });
 
     </script>
 

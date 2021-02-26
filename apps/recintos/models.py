@@ -41,8 +41,12 @@ class Mesa(EstadoModel):
     numeromesa = models.CharField(max_length=100, blank=False, null=True,verbose_name='Numero de Mesa',
                                      help_text='Ingrese su Numero de Mesa')
     mesahabilitado = models.IntegerField(default=0, verbose_name='Habilitado en Mesa')
+
+    #def __str__(self):
+    #    return "%s %s %s" % (self.recinto.localidad.nombrelocalidad,self.recinto.nombrerecinto,self.numeromesa)
+
     def __str__(self):
-        return "%s %s %s" % (self.recinto.localidad.nombrelocalidad,self.recinto.nombrerecinto,self.numeromesa)
+        return "%s # %s - %s" % (self.recinto.nombrerecinto,self.numeromesa,self.mesahabilitado)
 
 class Sufragio(EstadoModel):
     tiposugrafio = models.CharField(max_length=100, blank=False, null=True,verbose_name='Nombre Tipo Recuento de Voto',
