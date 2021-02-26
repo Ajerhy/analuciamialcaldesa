@@ -3,6 +3,7 @@ from django.conf import settings
 #from apps.usuarios.models import EstadoModel
 from apps.geolocalizacion.models import Localidad,Ubicacion
 import uuid
+import time
 
 class EstadoModel(models.Model):
     #id = models.UUIDField('id', default=uuid.uuid4, primary_key=True, unique=True, null=False, blank=False,editable=False)
@@ -49,6 +50,14 @@ class Sufragio(EstadoModel):
     def __str__(self):
         return "%s" % (self.tiposugrafio)
 
+def img_acta(self, filename):
+    hash_ = int(time.time())
+    return "%s/%s/%s" % ("acta", hash_, filename)
+
+def img_hojatrabajo(self, filename):
+    hash_ = int(time.time())
+    return "%s/%s/%s" % ("img_hojatrabajo", hash_, filename)
+
 class Conteo(EstadoModel):
     delegadomesa = models.CharField(max_length=100, blank=True, null=True,verbose_name='Delegado de Mesa',help_text='Ingrese su Nombre o C.I')
     presidentemesa = models.CharField(max_length=100, blank=True, null=True,verbose_name='Presidente de Mesa',help_text='Ingrese su Nombre o C.I')
@@ -91,10 +100,10 @@ class Conteo(EstadoModel):
 
     cerrarpapeleta = models.IntegerField(default=0, verbose_name='Papeleta Mesa')
 
-    acta_img = models.ImageField(verbose_name='Foto de Acta de Sugrafio', upload_to='acta/%Y/%m/%d/%h', blank=True,
+    acta_img = models.ImageField(verbose_name='Foto de Acta de Sugrafio', upload_to=img_acta, blank=True,
                                     null=True)
 
-    hojatabajo_img = models.ImageField(verbose_name='Foto de Hoja de Trabajo', upload_to='hojatabajo/%Y/%m/%d/%h', blank=True,
+    hojatabajo_img = models.ImageField(verbose_name='Foto de Hoja de Trabajo', upload_to=img_hojatrabajo, blank=True,
                                     null=True)
 
     ubicacion = models.ForeignKey(Ubicacion, null=True, blank=True, on_delete=models.CASCADE)

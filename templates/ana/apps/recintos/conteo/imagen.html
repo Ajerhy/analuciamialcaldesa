@@ -10,12 +10,21 @@
         </div>
         <div class="modal-body">
             <div class="row">
-                {% if not obj.certificado_img %}
-                    <img src="{% static 'img/user.png' %}" alt="Imagen de Certificado"
+
+                {% if not obj.acta_img %}
+                    <img src="{% static 'img/user.png' %}" alt="Foto de Acta de Sufragio" class="img-thumbnail"/>
+                {% else %}
+                    <img src="{{ obj.acta_img.url }}" alt="{{ obj.id }}" class="img-thumbnail"/>
+                {% endif %}
+
+                {% if not obj.hojatabajo_img %}
+                    <img src="{% static 'img/user.png' %}" alt="Foto de Hoja de Trabjo"
                          class="img-thumbnail"/>
                 {% else %}
-                    <img src="{{ obj.certificado_img.url }}" alt="{{ obj.id }}" class="img-thumbnail"/>
+                    <img src="{{ obj.hojatabajo_img.url }}" alt="{{ obj.id }}"
+                         class="img-thumbnail"/>
                 {% endif %}
+
             </div>
         </div>
         <div class="modal-footer">
