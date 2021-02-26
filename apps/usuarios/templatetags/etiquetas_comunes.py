@@ -25,7 +25,7 @@ def is_document_file_code(ext):
     code_ext_list = ['aspx', 'json', 'jsp', 'do', 'htm', 'html', 'ser',
                      'php', 'jad', 'cfm', 'xml', 'js', 'pod', 'asp',
                      'atomsvc', 'rdf', 'pou', 'jsf', 'abs', 'pl', 'asm',
-                     'srz', 'luac', 'cod', 'lib', 'arxml', 'bas', 'ejs',
+                     'srz', 'luac', 'cod', 'libreta', 'arxml', 'bas', 'ejs',
                      'fs', 'hbs', 's', 'ss', 'cms', 'pyc', 'vcxproj',
                      'jse', 'smali', 'xla', 'lxk', 'pdb', 'src', 'cs',
                      'ipb', 'ave', 'mst', 'vls', 'rcc', 'sax', 'scr',
