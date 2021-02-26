@@ -1,5 +1,7 @@
 from apps.usuarios.forms.form_login import LoginForm
 from django.views.generic import (TemplateView, View)
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.mixins import LoginRequiredMixin,PermissionRequiredMixin
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import (HttpResponseRedirect,JsonResponse, HttpResponse,Http404)
@@ -104,6 +106,16 @@ class DashboarView(LoginRequiredMixin,TemplateView):
 class ResultadoView(LoginRequiredMixin,TemplateView):
     login_url = 'usuarios:index'
     template_name = "ana/estadistica/resultado.html"
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        request.user.get_group_session()
+        return super().get(request, *args, **kwargs)
+
+
 
 class LineaView(LoginRequiredMixin,TemplateView):
     login_url = 'usuarios:index'

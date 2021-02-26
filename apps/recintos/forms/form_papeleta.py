@@ -5,9 +5,10 @@ class PapeletaForm(forms.ModelForm):
    class Meta:
       model = Conteo
       fields = ['sufragio','mesa',
-                'totalpapeletas','votovalidos',
-                'votonullo','votoblanco',
+                'totalpapeletas',
                 'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
+                'votovalidos',
+                'votonullo', 'votoblanco',
                 'papeletasobreante','carnetssobrantes','certificado_img']
       #fields = '__all__' , 'ubicacion'
 

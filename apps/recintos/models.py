@@ -59,26 +59,27 @@ class Conteo(EstadoModel):
     #totalpapeletas = models.CharField(max_length=100, blank=False, null=True, verbose_name='Total de Papeletas',help_text='Ingrese Total de Papeletas')
     totalpapeletas = models.IntegerField(default=0,verbose_name='Papeletas o Habilitados')
 
+    #votovida = models.IntegerField(default=0, verbose_name='Votos en VIDA',help_text='Vision Democratica Amazonica')
+    votocid = models.IntegerField(default=0, verbose_name='Votos en C.I.D',help_text='Comunidad de Integracion Democratica')
+    votomasipsp = models.IntegerField(default=0, verbose_name='Votos MAS IPSP',help_text='Movimiento Al Socialismo IPSP')
+    votopanbol = models.IntegerField(default=0, verbose_name='Votos PAN-BOL',help_text='Partido de Accion Nacional Boliviano')
+    votopst = models.IntegerField(default=0, verbose_name='Votos en P.S.T',help_text='Pando Somos Todos')
+    votomts = models.IntegerField(default=0, verbose_name='Votos en M.T.S',help_text='Movimiento Tercer Sistema')
+    votofpv = models.IntegerField(default=0, verbose_name='Votos en FPV', help_text='Frente Para la Victoria')
+    votopaso = models.IntegerField(default=0, verbose_name='Votos en PASO', help_text='Poder Amazonico Social')
+    votomda = models.IntegerField(default=0, verbose_name='Votos en MDA', help_text='Movimiento Democratica Autonomista')
+
     votovalidos = models.IntegerField(default=0, verbose_name='Votos Validos')
     votonullo = models.IntegerField(default=0, verbose_name='Votos en Nulos')
     votoblanco = models.IntegerField(default=0, verbose_name='Votos en Blancos')
 
-    #votovida = models.IntegerField(default=0, verbose_name='Votos en VIDA',help_text='Vision Democratica Amazonica')
-    votocid = models.IntegerField(default=0, verbose_name='Votos en Comunidad de Integracion Democratica',help_text='Comunidad de Integracion Democratica')
-    votomasipsp = models.IntegerField(default=0, verbose_name='Votos MAS IPSP',help_text='Movimiento Al Socialismo IPSP')
-    votopanbol = models.IntegerField(default=0, verbose_name='Votos PAN-BOL',help_text='Partido de Accion Nacional Boliviano')
-    votopst = models.IntegerField(default=0, verbose_name='Votos en PST',help_text='Pando Somos Todos')
-    votomts = models.IntegerField(default=0, verbose_name='Votos en MTS',help_text='Movimiento Tercer Sistema')
-    votofpv = models.IntegerField(default=0, verbose_name='Votos en FPV', help_text='Frente Para la Victoria')
-    votopaso = models.IntegerField(default=0, verbose_name='Votos en PASO', help_text='Poder Amazonico Social')
-    votomda = models.IntegerField(default=0, verbose_name='Votos en MDA', help_text='Movimiento Democratica Autonomista')
 
     marcadopapeleta = models.IntegerField(default=0, verbose_name='Numero Papeleta Marcados')
 
     #2
     nropapeletasobrante = models.IntegerField(default=0, verbose_name='Numero Papeleta Sobrante')
 
-    papeletasobreante = models.IntegerField(default=0, verbose_name='Papeletas Sobrante')
+    papeletasobreante = models.IntegerField(default=0, verbose_name='Cantidad de Papeletas no Utilizadas')
     carnetssobrantes = models.IntegerField(default=0, verbose_name='Carnet Sobrante')
     #1
     verificacioncipapeleta = models.BooleanField(default=0, verbose_name='C.I. y Papeletas')
