@@ -8,9 +8,10 @@ class PapeletaForm(forms.ModelForm):
                 'totalpapeletas',
                 'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
                 'votovalidos',
-                'votonullo', 'votoblanco',
-                'papeletasobreante','carnetssobrantes','certificado_img']
+                'votoblanco','votonullo',
+                'papeletasobreante','certificado_img']
       #fields = '__all__' , 'ubicacion'
+      exclude = ['carnetssobrantes']
 
    def __init__(self, *args, **kwargs):
       super().__init__(*args, **kwargs)

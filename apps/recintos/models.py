@@ -70,8 +70,9 @@ class Conteo(EstadoModel):
     votomda = models.IntegerField(default=0, verbose_name='Votos en MDA', help_text='Movimiento Democratica Autonomista')
 
     votovalidos = models.IntegerField(default=0, verbose_name='Votos Validos')
-    votonullo = models.IntegerField(default=0, verbose_name='Votos en Nulos')
     votoblanco = models.IntegerField(default=0, verbose_name='Votos en Blancos')
+    votonullo = models.IntegerField(default=0, verbose_name='Votos en Nulos')
+
 
 
     marcadopapeleta = models.IntegerField(default=0, verbose_name='Numero Papeleta Marcados')
