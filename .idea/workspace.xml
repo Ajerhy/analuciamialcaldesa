@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f48114-527b-4da9-bd9d-a06d25690337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/certificado/2021/02/21/img-30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/certificado/2021/02/22/Feb/90071.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/formulario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/papeleta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/detalle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/imagen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/recintos/conteo/imagen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +108,7 @@
       <workItem from="1614129534037" duration="2967000" />
       <workItem from="1614217804773" duration="1465000" />
       <workItem from="1614224333536" duration="6059000" />
-      <workItem from="1614312363148" duration="4387000" />
+      <workItem from="1614312363148" duration="4711000" />
     </task>
     <servers />
   </component>

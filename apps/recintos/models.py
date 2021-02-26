@@ -56,7 +56,7 @@ def img_acta(self, filename):
 
 def img_hojatrabajo(self, filename):
     hash_ = int(time.time())
-    return "%s/%s/%s" % ("img_hojatrabajo", hash_, filename)
+    return "%s/%s/%s" % ("hojatrabajo", hash_, filename)
 
 class Conteo(EstadoModel):
     delegadomesa = models.CharField(max_length=100, blank=True, null=True,verbose_name='Delegado de Mesa',help_text='Ingrese su Nombre o C.I')
@@ -81,8 +81,6 @@ class Conteo(EstadoModel):
     votovalidos = models.IntegerField(default=0, verbose_name='Votos Validos')
     votoblanco = models.IntegerField(default=0, verbose_name='Votos en Blancos')
     votonullo = models.IntegerField(default=0, verbose_name='Votos en Nulos')
-
-
 
     marcadopapeleta = models.IntegerField(default=0, verbose_name='Numero Papeleta Marcados')
 
