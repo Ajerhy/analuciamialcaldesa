@@ -9,7 +9,7 @@ class PapeletaForm(forms.ModelForm):
                 'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
                 'votovalidos',
                 'votoblanco','votonullo',
-                'papeletasobreante','certificado_img']
+                'papeletasobreante','acta_img','hojatabajo_img']
       #fields = '__all__' , 'ubicacion'
       exclude = ['carnetssobrantes']
 

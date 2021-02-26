@@ -26,16 +26,31 @@
                     </div>
                 {% endfor %}
 
-
-                <div class="form-group ">
-                    <label for="customFile">Imagen Selecionada :</label>
-                    <div class="text-center mb-1 col-12">
-                        <img src="{% static 'favicon.ico' %}" class="imgPreview"
-                             height="100pd" width="100pd">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group ">
+                            <label for="customFile">Imagen Acta :</label>
+                            <div class="text-center mb-1 col-12">
+                                <img src="{% static 'favicon.ico' %}" class="imgActa"
+                                     height="100pd" width="100pd">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group ">
+                            <label for="customFile">Imagen Hoja de Trabajo :</label>
+                            <div class="text-center mb-1 col-12">
+                                <img src="{% static 'favicon.ico' %}" class="imgHojaTrabajo"
+                                     height="100pd" width="100pd">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+                <button type="submit" class="btn btn-primary">Cargar Votos</button>
             </form>
 
         </div>
@@ -50,14 +65,28 @@
 
     <script>
         $(document).ready(() => {
-            $('#id_certificado_img').change(function () {
+            $('#id_acta_img').change(function () {
                 const file = this.files[0];
                 console.log(file);
                 if (file) {
                     let reader = new FileReader();
                     reader.onload = function (event) {
                         console.log(event.target.result);
-                        $('.imgPreview').attr('src', event.target.result);
+                        $('.imgActa').attr('src', event.target.result);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+        $(document).ready(() => {
+            $('#id_hojatabajo_img').change(function () {
+                const file = this.files[0];
+                console.log(file);
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        console.log(event.target.result);
+                        $('.imgHojaTrabajo').attr('src', event.target.result);
                     }
                     reader.readAsDataURL(file);
                 }

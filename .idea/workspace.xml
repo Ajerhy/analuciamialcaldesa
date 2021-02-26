@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/forms/form_papeleta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/recintos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/recintos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info-deploy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info-deploy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ana/apps/papeleta/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ana/apps/papeleta/formulario.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,7 @@
       <workItem from="1614129534037" duration="2967000" />
       <workItem from="1614217804773" duration="1465000" />
       <workItem from="1614224333536" duration="6059000" />
-      <workItem from="1614312363148" duration="1356000" />
+      <workItem from="1614312363148" duration="1989000" />
     </task>
     <servers />
   </component>
