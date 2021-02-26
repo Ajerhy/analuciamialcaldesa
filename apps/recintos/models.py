@@ -114,6 +114,7 @@ class Conteo(EstadoModel):
         return '{}'.format(self.id)
 
     def save(self):
+        self.totalpapeletas = self.mesa.mesahabilitado
         #3
         self.total = self.votopst + self.votopaso + self.votopanbol + self.votocid \
                      + self.votomda + self.votomts + self.votofpv + self.votomasipsp

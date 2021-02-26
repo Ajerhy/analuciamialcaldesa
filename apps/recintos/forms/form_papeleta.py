@@ -5,13 +5,12 @@ class PapeletaForm(forms.ModelForm):
    class Meta:
       model = Conteo
       fields = ['sufragio','mesa',
-                'totalpapeletas',
                 'votocid','votomasipsp','votopanbol','votopst','votomts','votofpv','votopaso','votomda',
                 'votovalidos',
                 'votoblanco','votonullo',
                 'papeletasobreante','acta_img','hojatabajo_img']
       #fields = '__all__' , 'ubicacion'
-      exclude = ['carnetssobrantes']
+      exclude = ['totalpapeletas','carnetssobrantes']
 
    def __init__(self, *args, **kwargs):
       super().__init__(*args, **kwargs)
