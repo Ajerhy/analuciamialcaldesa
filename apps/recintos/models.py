@@ -91,10 +91,10 @@ class Conteo(EstadoModel):
 
     cerrarpapeleta = models.IntegerField(default=0, verbose_name='Papeleta Mesa')
 
-    acta_img = models.ImageField(verbose_name='Imagen de Acta de Sugrafio', upload_to='acta/%Y/%m/%d/%h', blank=True,
+    acta_img = models.ImageField(verbose_name='Foto de Acta de Sugrafio', upload_to='acta/%Y/%m/%d/%h', blank=True,
                                     null=True)
 
-    hojatabajo_img = models.ImageField(verbose_name='Imagen de Hoja de Trabajo', upload_to='hojatabajo/%Y/%m/%d/%h', blank=True,
+    hojatabajo_img = models.ImageField(verbose_name='Foto de Hoja de Trabajo', upload_to='hojatabajo/%Y/%m/%d/%h', blank=True,
                                     null=True)
 
     ubicacion = models.ForeignKey(Ubicacion, null=True, blank=True, on_delete=models.CASCADE)
