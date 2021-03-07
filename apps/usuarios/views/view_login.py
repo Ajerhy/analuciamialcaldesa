@@ -103,6 +103,7 @@ class DashboarView(LoginRequiredMixin,TemplateView):
         context["API_KEY"] = settings.API_KEY_GOOGLE_MAPS
         return context
 
+
 class ResultadoView(LoginRequiredMixin,TemplateView):
     login_url = 'usuarios:index'
     template_name = "ana/estadistica/resultado.html"
@@ -114,8 +115,6 @@ class ResultadoView(LoginRequiredMixin,TemplateView):
     def get(self, request, *args, **kwargs):
         request.user.get_group_session()
         return super().get(request, *args, **kwargs)
-
-
 
 class LineaView(LoginRequiredMixin,TemplateView):
     login_url = 'usuarios:index'
@@ -139,9 +138,6 @@ class LineaView(LoginRequiredMixin,TemplateView):
         context["total"] = Conteo.objects.aggregate(Sum('total'))
         return context
 
-
-
-
 class BarraView(LoginRequiredMixin,TemplateView):
     login_url = 'usuarios:index'
     template_name = "ana/estadistica/barra.html"
@@ -162,6 +158,7 @@ class BarraView(LoginRequiredMixin,TemplateView):
         context["total_papeleta"] = Conteo.objects.aggregate(Sum('marcadopapeleta'))
         context["total"] = Conteo.objects.aggregate(Sum('total'))
         return context
+
 
 class GrupoCambioUsuario(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
